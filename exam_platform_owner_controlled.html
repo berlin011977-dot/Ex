@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070d;--surface:#0f0f18;--card:#16161f;--card2:#1c1c28;
+  --border:#252535;--border2:#32324a;
+  --accent:#7c6dfa;--accent2:#fa6d8f;--accent3:#4dfa9a;--accent4:#fac84d;
+  --text:#ededf5;--muted:#777790;--dim:#383850;
+  --r:12px;--r-sm:8px;--r-lg:18px;--r-xl:24px;
+}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);min-height:600px;direction:rtl}
+
+/* ─── SCREENS ─── */
+.screen{display:none;min-height:600px}
+.screen.on{display:flex;flex-direction:column}
+
+/* ─── LOGIN ─── */
+#scrLogin{align-items:center;justify-content:center;padding:40px 20px;background:var(--bg)}
+.login-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:40px 36px;width:100%;max-width:380px;text-align:center}
+.login-logo{font-family:'DM Serif Display',serif;font-size:28px;color:var(--accent);margin-bottom:4px}
+.login-logo span{color:var(--accent2)}
+.login-sub{font-size:13px;color:var(--muted);margin-bottom:32px}
+.login-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 20px}
+.inp{width:100%;padding:11px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);color:var(--text);font-family:'Tajawal',sans-serif;font-size:14px;outline:none;transition:border-color .2s;text-align:right}
+.inp:focus{border-color:var(--accent)}
+.inp-wrap{position:relative;margin-bottom:14px}
+.inp-label{font-size:12px;color:var(--muted);margin-bottom:6px;display:block;text-align:right}
+.login-hint{font-size:11px;color:var(--dim);margin-top:20px;line-height:1.5}
+.err-msg{background:rgba(250,109,143,.1);border:1px solid rgba(250,109,143,.3);border-radius:var(--r-sm);padding:10px;font-size:13px;color:var(--accent2);margin-bottom:12px;display:none}
+
+/* ─── TOPBAR ─── */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:var(--surface);border-bottom:1px solid var(--border);flex-shrink:0;position:sticky;top:0;z-index:50}
+.logo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--accent)}
+.logo span{color:var(--accent2)}
+.top-right{display:flex;align-items:center;gap:8px}
+.role-badge{padding:4px 10px;border-radius:20px;font-size:11px;font-family:'JetBrains Mono',monospace;border:1px solid;background:rgba(124,109,250,.15);border-color:var(--accent);color:var(--accent)}
+.role-badge.student{background:rgba(77,250,154,.1);border-color:var(--accent3);color:var(--accent3)}
+.top-btn{padding:6px 14px;border-radius:var(--r-sm);border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-family:'Tajawal',sans-serif;font-size:12px;transition:all .2s}
+.top-btn:hover{border-color:var(--accent2);color:var(--accent2)}
+.lang-btn{padding:5px 12px;border-radius:20px;border:1px solid var(--dim);background:transparent;color:var(--muted);cursor:pointer;font-size:11px;font-family:'JetBrains Mono',monospace;transition:all .2s}
+.lang-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ─── MAIN LAYOUT ─── */
+.main{flex:1;overflow-y:auto;padding:24px 20px;max-width:860px;width:100%;margin:0 auto}
+
+/* ─── CARDS ─── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;margin-bottom:14px}
+.card-hd{font-size:14px;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.ic{width:26px;height:26px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+
+/* ─── UPLOAD ─── */
+.upload-zone{border:2px dashed var(--dim);border-radius:var(--r-lg);padding:36px 20px;text-align:center;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
+.upload-zone:hover,.upload-zone.drag{border-color:var(--accent);background:rgba(124,109,250,.05)}
+.upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.upload-icon{font-size:36px;margin-bottom:10px}
+.upload-ttl{font-size:15px;font-weight:600;margin-bottom:5px}
+.upload-sub{font-size:12px;color:var(--muted)}
+.badges{display:flex;justify-content:center;gap:6px;margin-top:10px;flex-wrap:wrap}
+.bdg{padding:2px 9px;border-radius:20px;font-size:10px;font-family:'JetBrains Mono',monospace;border:1px solid}
+.bdg-b{border-color:#3b82f6;color:#60a5fa;background:rgba(59,130,246,.1)}
+.bdg-p{border-color:var(--accent);color:#a78bfa;background:rgba(124,109,250,.1)}
+
+/* ─── PROGRESS ─── */
+.prog-bar{height:3px;background:var(--border);border-radius:4px;overflow:hidden;margin:10px 0}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:4px;transition:width .5s}
+.step-r{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)}
+.step-r:last-child{border:none}
+.sdot{width:7px;height:7px;border-radius:50%;background:var(--dim);flex-shrink:0;transition:all .3s}
+.sdot.done{background:var(--accent3)}
+.sdot.act{background:var(--accent);box-shadow:0 0 6px var(--accent)}
+.slbl{font-size:12px;color:var(--muted);transition:color .3s}
+.slbl.act{color:var(--text)}
+.slbl.done{color:var(--accent3)}
+
+/* ─── STATS ─── */
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px;text-align:center}
+.sn{font-size:26px;font-weight:700;font-family:'JetBrains Mono',monospace}
+.sl{font-size:11px;color:var(--muted);margin-top:3px}
+
+/* ─── EXAM LIST ─── */
+.ex-item{background:var(--card2);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;transition:all .2s;gap:12px;flex-wrap:wrap}
+.ex-item:hover{border-color:var(--border2)}
+.ex-title{font-size:14px;font-weight:600}
+.ex-meta{font-size:11px;color:var(--muted);margin-top:3px}
+.ex-actions{display:flex;gap:6px;flex-shrink:0}
+
+/* ─── Q LIST ─── */
+.q-scroll{max-height:280px;overflow-y:auto;padding-left:2px}
+.q-scroll::-webkit-scrollbar{width:3px}
+.q-scroll::-webkit-scrollbar-thumb{background:var(--dim);border-radius:4px}
+.q-itm{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:11px 14px;margin-bottom:7px;cursor:default}
+.q-num{font-size:10px;color:var(--accent);font-family:'JetBrains Mono',monospace;margin-bottom:3px}
+.q-txt{font-size:13px;line-height:1.5}
+.q-ans{margin-top:5px;font-size:11px;color:var(--accent3)}
+
+/* ─── BUTTONS ─── */
+.btn{padding:9px 20px;border-radius:var(--r-sm);border:none;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:600;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.btn-pri{background:var(--accent);color:#fff}
+.btn-pri:hover{background:#6a5ce8;transform:translateY(-1px)}
+.btn-danger{background:rgba(250,109,143,.12);color:var(--accent2);border:1px solid rgba(250,109,143,.35)}
+.btn-danger:hover{background:rgba(250,109,143,.2)}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-green{background:rgba(77,250,154,.12);color:var(--accent3);border:1px solid rgba(77,250,154,.35)}
+.btn-sm{padding:6px 12px;font-size:12px}
+.btn:disabled{opacity:.35;cursor:not-allowed;transform:none!important}
+.btn-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+
+/* ─── FORM ─── */
+.fg{margin-bottom:12px}
+.lbl{font-size:12px;color:var(--muted);margin-bottom:5px;display:block}
+textarea.inp{resize:vertical;min-height:70px}
+
+/* ─── FILE PREVIEW ─── */
+.file-prev{display:flex;align-items:center;gap:10px;padding:10px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);margin-top:10px}
+.file-ic{width:34px;height:34px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:16px;background:rgba(124,109,250,.15)}
+.file-nm{font-size:13px;font-weight:500}
+.file-sz{font-size:11px;color:var(--muted)}
+
+/* ─── STUDENT EXAM ─── */
+.exam-hdr{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 20px;margin-bottom:14px}
+.exam-ttl{font-family:'DM Serif Display',serif;font-size:20px;color:var(--text);margin-bottom:8px}
+.timer{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:500;color:var(--accent4);background:var(--card2);border:1px solid var(--border);border-radius:var(--r-sm);padding:7px 14px;display:inline-block}
+.timer.warn{color:var(--accent2)}
+.q-nav{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px}
+.qd{width:30px;height:30px;border-radius:var(--r-sm);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:10px;cursor:pointer;transition:all .2s;font-family:'JetBrains Mono',monospace;color:var(--muted);background:var(--surface)}
+.qd.answered{background:rgba(124,109,250,.2);border-color:var(--accent);color:var(--accent)}
+.qd.current{background:var(--accent);border-color:var(--accent);color:#fff}
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;margin-bottom:14px}
+.q-body{font-size:16px;line-height:1.75;color:var(--text);margin-bottom:18px}
+.options{display:flex;flex-direction:column;gap:9px}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:11px 15px;border-radius:var(--r-sm);border:1px solid var(--border);cursor:pointer;transition:all .2s;background:var(--surface)}
+.opt:hover:not(.sel):not(.cor):not(.wrg){border-color:var(--accent);background:rgba(124,109,250,.05)}
+.opt.sel{border-color:var(--accent);background:rgba(124,109,250,.1)}
+.opt.cor{border-color:var(--accent3);background:rgba(77,250,154,.08);color:var(--accent3)}
+.opt.wrg{border-color:var(--accent2);background:rgba(250,109,143,.08);color:var(--accent2)}
+.opt-k{width:26px;height:26px;border-radius:6px;border:1px solid var(--dim);display:flex;align-items:center;justify-content:center;font-size:11px;font-family:'JetBrains Mono',monospace;flex-shrink:0;transition:all .2s;color:var(--muted)}
+.opt.sel .opt-k{background:var(--accent);border-color:var(--accent);color:#fff}
+.opt.cor .opt-k{background:var(--accent3);border-color:var(--accent3);color:#000}
+.opt.wrg .opt-k{background:var(--accent2);border-color:var(--accent2);color:#fff}
+.opt-t{font-size:14px;line-height:1.6;flex:1}
+.expl{background:rgba(77,250,154,.05);border:1px solid rgba(77,250,154,.25);border-radius:var(--r-sm);padding:12px;margin-top:12px;font-size:13px;color:var(--accent3);line-height:1.6}
+.expl strong{display:block;margin-bottom:3px;font-size:11px;font-family:'JetBrains Mono',monospace;opacity:.7}
+
+/* ─── RESULT ─── */
+.score-circle{width:110px;height:110px;border-radius:50%;border:3px solid var(--accent);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 14px;background:rgba(124,109,250,.08)}
+.score-pct{font-size:30px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--accent)}
+.score-lbl{font-size:10px;color:var(--muted)}
+
+/* ─── NO EXAM ─── */
+.empty{text-align:center;padding:48px 20px;color:var(--muted)}
+.empty-ic{font-size:44px;margin-bottom:12px}
+
+/* ─── TOAST ─── */
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--card2);border:1px solid var(--accent);border-radius:var(--r-sm);padding:11px 20px;font-size:13px;color:var(--text);z-index:999;opacity:0;transition:all .3s;white-space:nowrap}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ─── SEP ─── */
+.sep{height:1px;background:var(--border);margin:14px 0}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ LOGIN SCREEN ═══════════════════ -->
+<div class="screen on" id="scrLogin">
+  <div class="login-box">
+    <div class="login-logo">Exam<span>Pro</span></div>
+    <div class="login-sub">منصة الامتحانات الرقمية</div>
+    <div class="login-avatar">👤</div>
+    <div id="loginErr" class="err-msg">كلمة المرور غلط، حاول مرة ثانية</div>
+    <label class="inp-label">ادخل ككـ...</label>
+    <div style="display:flex;gap:8px;margin-bottom:18px">
+      <button class="btn btn-pri" style="flex:1;justify-content:center" onclick="tryOwner()">🔑 المالك</button>
+      <button class="btn btn-green" style="flex:1;justify-content:center" onclick="enterStudent()">🎓 طالب</button>
+    </div>
+    <div id="ownerPwdBox" style="display:none">
+      <label class="inp-label">كلمة مرور المالك</label>
+      <input class="inp" type="password" id="pwdInput" placeholder="أدخل كلمة المرور" onkeydown="if(event.key==='Enter')checkPwd()">
+      <div class="btn-row" style="margin-top:10px">
+        <button class="btn btn-pri" style="flex:1;justify-content:center" onclick="checkPwd()">دخول ←</button>
+      </div>
+    </div>
+    <div class="login-hint">الطلاب يدخلون مباشرة بدون كلمة مرور<br>المالك فقط يستطيع رفع وإدارة الامتحانات</div>
+  </div>
+</div>
+
+<!-- ═══════════════════ OWNER SCREEN ═══════════════════ -->
+<div class="screen" id="scrOwner">
+  <div class="topbar">
+    <div class="logo">Exam<span>Pro</span></div>
+    <div class="top-right">
+      <span class="role-badge">👑 المالك</span>
+      <button class="lang-btn" onclick="toggleLang()" id="langBtnO">EN</button>
+      <button class="top-btn" onclick="logout()">خروج</button>
+    </div>
+  </div>
+  <div class="main">
+
+    <!-- Upload -->
+    <div class="card">
+      <div class="card-hd"><div class="ic" style="background:rgba(124,109,250,.15)">📤</div><span id="ot-upload">رفع ملف امتحان جديد</span></div>
+      <div class="upload-zone" id="upZone" ondragover="onDrag(event,1)" ondragleave="onDrag(event,0)" ondrop="onDrop(event)">
+        <input type="file" id="fileIn" accept=".pdf,.docx,.doc,.txt" onchange="onFile(event)">
+        <div class="upload-icon">📁</div>
+        <div class="upload-ttl" id="ot-dropT">اسحب الملف هنا أو انقر للاختيار</div>
+        <div class="upload-sub" id="ot-dropS">يحتوي على الأسئلة ومفتاح الإجابات</div>
+        <div class="badges">
+          <span class="bdg bdg-b">PDF</span><span class="bdg bdg-p">DOCX</span><span class="bdg bdg-b">TXT</span>
+        </div>
+      </div>
+      <div id="filePrev"></div>
+    </div>
+
+    <!-- Settings -->
+    <div class="card">
+      <div class="card-hd"><div class="ic" style="background:rgba(250,200,77,.15)">⚙️</div><span id="ot-cfg">إعدادات الامتحان</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="fg">
+          <label class="lbl" id="ot-durLbl">المدة (دقيقة)</label>
+          <input class="inp" type="number" id="cfgDur" value="60" min="5" max="300">
+        </div>
+        <div class="fg">
+          <label class="lbl" id="ot-extraLbl">تعليمات إضافية</label>
+          <input class="inp" type="text" id="cfgExtra" placeholder="اختياري">
+        </div>
+      </div>
+      <button class="btn btn-pri" id="procBtn" onclick="processExam()" disabled>🧠 <span id="ot-procBtn">معالجة بالذكاء الاصطناعي</span></button>
+    </div>
+
+    <!-- Progress -->
+    <div class="card" id="progCard" style="display:none">
+      <div class="card-hd"><div class="ic" style="background:rgba(77,250,154,.15)">⚡</div><span id="ot-procLbl">جاري المعالجة</span></div>
+      <div class="prog-bar"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+      <div>
+        <div class="step-r"><div class="sdot" id="d1"></div><span class="slbl" id="s1">استخراج النص</span></div>
+        <div class="step-r"><div class="sdot" id="d2"></div><span class="slbl" id="s2">تحليل الهيكل</span></div>
+        <div class="step-r"><div class="sdot" id="d3"></div><span class="slbl" id="s3">استخراج الأسئلة والإجابات</span></div>
+        <div class="step-r"><div class="sdot" id="d4"></div><span class="slbl" id="s4">توليد الشروح</span></div>
+        <div class="step-r"><div class="sdot" id="d5"></div><span class="slbl" id="s5">الحفظ</span></div>
+      </div>
+    </div>
+
+    <!-- Preview -->
+    <div class="card" id="prevCard" style="display:none">
+      <div class="card-hd"><div class="ic" style="background:rgba(77,250,154,.15)">✅</div><span id="ot-prevTtl">معاينة قبل النشر</span></div>
+      <div class="stats3">
+        <div class="stat"><div class="sn" style="color:var(--accent)" id="ps-q">0</div><div class="sl" id="ot-sq">سؤال</div></div>
+        <div class="stat"><div class="sn" style="color:var(--accent3)" id="ps-d">60</div><div class="sl" id="ot-sd">دقيقة</div></div>
+        <div class="stat"><div class="sn" style="color:var(--accent2)" id="ps-o">4</div><div class="sl" id="ot-so">خيارات</div></div>
+      </div>
+      <div class="fg">
+        <label class="lbl" id="ot-titleLbl">عنوان الامتحان</label>
+        <input class="inp" id="editTitle" type="text">
+      </div>
+      <div class="sep"></div>
+      <div class="card-hd" style="margin-bottom:10px"><span id="ot-qprev">الأسئلة</span></div>
+      <div class="q-scroll" id="qList"></div>
+      <div class="btn-row">
+        <button class="btn btn-pri" onclick="publishExam()">🚀 <span id="ot-pub">نشر الامتحان</span></button>
+        <button class="btn btn-ghost" onclick="resetUpload()">↩ <span id="ot-rst">إعادة</span></button>
+      </div>
+    </div>
+
+    <!-- Published -->
+    <div class="card" id="pubCard">
+      <div class="card-hd"><div class="ic" style="background:rgba(250,200,77,.15)">📋</div><span id="ot-pubTtl">الامتحانات المنشورة</span></div>
+      <div id="ownerExamList"><div class="empty"><div class="empty-ic">📭</div><div id="ot-none">لا توجد امتحانات بعد</div></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════ STUDENT SCREEN ═══════════════════ -->
+<div class="screen" id="scrStudent">
+  <div class="topbar">
+    <div class="logo">Exam<span>Pro</span></div>
+    <div class="top-right">
+      <span class="role-badge student">🎓 طالب</span>
+      <button class="lang-btn" onclick="toggleLang()" id="langBtnS">EN</button>
+      <button class="top-btn" onclick="logout()">خروج</button>
+    </div>
+  </div>
+  <div class="main">
+
+    <!-- Lobby -->
+    <div id="stLobby">
+      <div class="card" style="text-align:center;padding:36px">
+        <div style="font-size:44px;margin-bottom:10px">🎓</div>
+        <div style="font-size:18px;font-weight:700;margin-bottom:6px" id="st-wel">مرحباً! اختر امتحاناً للبدء</div>
+        <div style="font-size:13px;color:var(--muted)" id="st-sub">الامتحانات المتاحة أدناه</div>
+      </div>
+      <div id="stExamList"><div class="empty"><div class="empty-ic">📭</div><div id="st-none">لا توجد امتحانات متاحة حالياً</div></div></div>
+    </div>
+
+    <!-- Taking Exam -->
+    <div id="stExam" style="display:none">
+      <div class="exam-hdr">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+          <div>
+            <div class="exam-ttl" id="stExamTitle"></div>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:6px;flex-wrap:wrap">
+              <span style="font-size:12px;color:var(--muted)" id="stQCount"></span>
+              <span class="timer" id="timerEl">--:--</span>
+            </div>
+          </div>
+          <button class="btn btn-danger btn-sm" onclick="submitExam()" id="st-sub">إنهاء ✓</button>
+        </div>
+        <div class="prog-bar" style="margin-top:10px"><div class="prog-fill" id="examProg" style="background:linear-gradient(90deg,var(--accent3),var(--accent));width:0%"></div></div>
+      </div>
+      <div class="q-nav" id="qNav"></div>
+      <div id="qArea"></div>
+      <div class="btn-row" style="justify-content:space-between">
+        <button class="btn btn-ghost" onclick="prevQ()" id="st-prev">→ السابق</button>
+        <button class="btn btn-pri" onclick="nextQ()" id="st-next">التالي ←</button>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="stResult" style="display:none">
+      <div class="card">
+        <div style="text-align:center;padding:28px 0 18px">
+          <div class="score-circle"><div class="score-pct" id="resPct">0%</div><div class="score-lbl" id="st-scoreL">النتيجة</div></div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:4px" id="resMsg"></div>
+          <div style="font-size:12px;color:var(--muted)" id="resSub"></div>
+        </div>
+        <div class="stats3" style="margin:0 0 14px">
+          <div class="stat"><div class="sn" style="color:var(--accent3)" id="rCorr">0</div><div class="sl" id="st-corr">صحيح</div></div>
+          <div class="stat"><div class="sn" style="color:var(--accent2)" id="rWrong">0</div><div class="sl" id="st-wrong">خطأ</div></div>
+          <div class="stat"><div class="sn" style="color:var(--muted)" id="rSkip">0</div><div class="sl" id="st-skip">لم يُجب</div></div>
+        </div>
+        <div class="sep"></div>
+        <div class="card-hd" id="st-rev">مراجعة الإجابات</div>
+        <div id="revArea" style="margin-top:10px"></div>
+        <div style="text-align:center;margin-top:18px">
+          <button class="btn btn-pri" onclick="backLobby()" id="st-back">🏠 العودة للقائمة</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const OWNER_PWD = "admin2024";
+
+const S = {
+  lang:'ar',
+  role:null,
+  exams:[],
+  cur:null,
+  curQ:0,
+  answers:{},
+  timer:null,
+  timeLeft:0,
+  file:null,
+  rawText:'',
+  parsed:null
+};
+
+/* ═══ STORAGE (shared = owner stored, students read) ═══ */
+async function saveExams(){
+  try{ await window.storage.set('owner_exams', JSON.stringify(S.exams), true); }
+  catch(e){ console.log('storage err',e); }
+}
+async function loadExams(){
+  try{
+    const r = await window.storage.get('owner_exams', true);
+    if(r) S.exams = JSON.parse(r.value);
+  } catch(e){ S.exams=[]; }
+}
+
+/* ═══ AUTH ═══ */
+function tryOwner(){
+  document.getElementById('ownerPwdBox').style.display='block';
+  document.getElementById('pwdInput').focus();
+}
+function checkPwd(){
+  const v = document.getElementById('pwdInput').value;
+  if(v === OWNER_PWD){
+    document.getElementById('loginErr').style.display='none';
+    S.role='owner';
+    show('scrOwner');
+    loadExams().then(()=>renderOwnerList());
+  } else {
+    document.getElementById('loginErr').style.display='block';
+    document.getElementById('pwdInput').value='';
+  }
+}
+async function enterStudent(){
+  S.role='student';
+  show('scrStudent');
+  await loadExams();
+  renderStudentList();
+}
+function logout(){
+  S.role=null; S.cur=null;
+  if(S.timer) clearInterval(S.timer);
+  document.getElementById('pwdInput').value='';
+  document.getElementById('ownerPwdBox').style.display='none';
+  document.getElementById('loginErr').style.display='none';
+  show('scrLogin');
+}
+function show(id){
+  ['scrLogin','scrOwner','scrStudent'].forEach(s=>{
+    document.getElementById(s).classList.toggle('on', s===id);
+  });
+}
+
+/* ═══ LANG ═══ */
+const STEPS_AR = ['استخراج النص','تحليل الهيكل','استخراج الأسئلة والإجابات','توليد الشروح','الحفظ'];
+const STEPS_EN = ['Extracting text','Analyzing structure','Extracting Q&A','Generating explanations','Saving'];
+
+function toggleLang(){
+  S.lang = S.lang==='ar'?'en':'ar';
+  const lbl = S.lang==='ar'?'EN':'AR';
+  document.getElementById('langBtnO').textContent=lbl;
+  document.getElementById('langBtnS').textContent=lbl;
+  const isAr = S.lang==='ar';
+  document.body.style.direction = isAr?'rtl':'ltr';
+  applyLangTexts();
+  renderOwnerList();
+  renderStudentList();
+  if(S.cur) renderQ();
+}
+
+function applyLangTexts(){
+  const ar = S.lang==='ar';
+  const T = {
+    'ot-upload': ar?'رفع ملف امتحان جديد':'Upload New Exam File',
+    'ot-dropT': ar?'اسحب الملف هنا أو انقر للاختيار':'Drag & drop or click to browse',
+    'ot-dropS': ar?'يحتوي على الأسئلة ومفتاح الإجابات':'Contains questions and answer key',
+    'ot-cfg': ar?'إعدادات الامتحان':'Exam Settings',
+    'ot-durLbl': ar?'المدة (دقيقة)':'Duration (min)',
+    'ot-extraLbl': ar?'تعليمات إضافية':'Extra instructions',
+    'ot-procBtn': ar?'معالجة بالذكاء الاصطناعي':'Process with AI',
+    'ot-procLbl': ar?'جاري المعالجة':'Processing...',
+    'ot-prevTtl': ar?'معاينة قبل النشر':'Preview Before Publishing',
+    'ot-sq': ar?'سؤال':'Questions',
+    'ot-sd': ar?'دقيقة':'Minutes',
+    'ot-so': ar?'خيارات':'Options',
+    'ot-titleLbl': ar?'عنوان الامتحان':'Exam Title',
+    'ot-qprev': ar?'الأسئلة':'Questions',
+    'ot-pub': ar?'نشر الامتحان':'Publish Exam',
+    'ot-rst': ar?'إعادة':'Reset',
+    'ot-pubTtl': ar?'الامتحانات المنشورة':'Published Exams',
+    'ot-none': ar?'لا توجد امتحانات بعد':'No exams yet',
+    'st-wel': ar?'مرحباً! اختر امتحاناً للبدء':'Welcome! Select an exam to begin',
+    'st-sub': ar?'الامتحانات المتاحة أدناه':'Available exams below',
+    'st-none': ar?'لا توجد امتحانات متاحة حالياً':'No exams available yet',
+    'st-sub2': ar?'إنهاء ✓':'Submit ✓',
+    'st-prev': ar?'→ السابق':'← Prev',
+    'st-next': ar?'التالي ←':'Next →',
+    'st-scoreL': ar?'النتيجة':'Score',
+    'st-corr': ar?'صحيح':'Correct',
+    'st-wrong': ar?'خطأ':'Wrong',
+    'st-skip': ar?'لم يُجب':'Skipped',
+    'st-rev': ar?'مراجعة الإجابات':'Review Answers',
+    'st-back': ar?'🏠 العودة للقائمة':'🏠 Back to List',
+  };
+  Object.entries(T).forEach(([id,txt])=>{
+    const el=document.getElementById(id);
+    if(el) el.textContent=txt;
+  });
+  const steps = ar?STEPS_AR:STEPS_EN;
+  steps.forEach((s,i)=>{ const el=document.getElementById('s'+(i+1)); if(el) el.textContent=s; });
+}
+
+/* ═══ FILE HANDLING ═══ */
+function onDrag(e,on){ e.preventDefault(); document.getElementById('upZone').classList.toggle('drag',!!on); }
+function onDrop(e){ e.preventDefault(); onDrag(e,0); const f=e.dataTransfer.files[0]; if(f) pickFile(f); }
+function onFile(e){ pickFile(e.target.files[0]); }
+function pickFile(f){
+  S.file=f; S.rawText='';
+  const ext=f.name.split('.').pop().toUpperCase();
+  const sz=(f.size/1024).toFixed(1)+'KB';
+  document.getElementById('filePrev').innerHTML=`
+    <div class="file-prev">
+      <div class="file-ic">${ext==='PDF'?'📄':'📝'}</div>
+      <div style="flex:1"><div class="file-nm">${f.name}</div><div class="file-sz">${sz} · ${ext}</div></div>
+    </div>`;
+  document.getElementById('procBtn').disabled=false;
+  const r=new FileReader();
+  r.onload=e=>{ S.rawText=e.target.result||''; };
+  r.readAsText(f);
+}
+
+/* ═══ AI PROCESSING ═══ */
+async function processExam(){
+  if(!S.file){ toast('الرجاء رفع ملف أولاً'); return; }
+  document.getElementById('procBtn').disabled=true;
+  document.getElementById('progCard').style.display='block';
+  document.getElementById('prevCard').style.display='none';
+
+  await step(1,15); await step(2,35); await step(3,60);
+
+  try{
+    const dur=parseInt(document.getElementById('cfgDur').value)||60;
+    const extra=document.getElementById('cfgExtra').value||'';
+    let content=S.rawText&&S.rawText.length>20?S.rawText:`[File: ${S.file.name}]\n(Text extraction unavailable in browser for this format)`;
+
+    const prompt=`You are an expert exam parser. The following text was extracted from an exam file. It contains multiple-choice questions and their correct answers.
+
+Output ONLY valid JSON (no markdown, no explanation):
+{
+  "examTitle": "exact title from the file",
+  "questions": [
+    {
+      "id": 1,
+      "questionText": "full question text exactly as written",
+      "options": ["option1","option2","option3","option4"],
+      "correctAnswerIndex": 0,
+      "explanation": "concise explanation"
+    }
+  ]
+}
+
+Rules:
+- PRESERVE exact original language. Never translate.
+- Ignore page numbers, headers, footers.
+- Detect correct answer by: asterisk (*), (✓), bold hint, or "الإجابة الصحيحة" / "Correct Answer".
+- If no real exam found, generate a sample 5-question MCQ exam relevant to the filename topic.
+- Always return valid JSON only.
+${extra?'Extra: '+extra:''}
+
+File content:
+${content.substring(0,3500)}`;
+
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:4000,messages:[{role:'user',content:prompt}]})
+    });
+    await step(4,80);
+    const data=await res.json();
+    let txt=data.content.map(b=>b.text||'').join('').replace(/```json|```/g,'').trim();
+    const parsed=JSON.parse(txt);
+    S.parsed={...parsed,duration:dur};
+    await step(5,100);
+    showPreview(S.parsed);
+
+  } catch(err){
+    console.error(err);
+    S.parsed=makeSample();
+    await step(4,80); await step(5,100);
+    showPreview(S.parsed);
+    toast('تم استخدام بيانات نموذجية');
+  }
+}
+
+function makeSample(){
+  const dur=parseInt(document.getElementById('cfgDur').value)||60;
+  return {
+    examTitle:S.file?S.file.name.replace(/\.(pdf|docx|doc|txt)$/i,''):'نموذج امتحان',
+    duration:dur,
+    questions:[
+      {id:1,questionText:'ما هي عاصمة المملكة العربية السعودية؟',options:['جدة','الرياض','مكة المكرمة','الدمام'],correctAnswerIndex:1,explanation:'الرياض هي العاصمة الإدارية للمملكة العربية السعودية ومقر الحكومة.'},
+      {id:2,questionText:'كم عدد أيام السنة الميلادية العادية؟',options:['364','365','366','367'],correctAnswerIndex:1,explanation:'السنة الميلادية العادية تتكون من 365 يوماً، أما السنة الكبيسة فتتكون من 366 يوماً.'},
+      {id:3,questionText:'What is the chemical symbol for water?',options:['CO2','H2O','NaCl','O2'],correctAnswerIndex:1,explanation:'Water is composed of two hydrogen atoms and one oxygen atom, giving it the chemical formula H2O.'},
+      {id:4,questionText:'من اخترع الهاتف؟',options:['توماس إديسون','ألكسندر غراهام بيل','نيكولا تيسلا','غوليلمو ماركوني'],correctAnswerIndex:1,explanation:'اخترع ألكسندر غراهام بيل الهاتف عام 1876 وحصل على أول براءة اختراع له.'},
+      {id:5,questionText:'Which planet is closest to the Sun?',options:['Venus','Earth','Mars','Mercury'],correctAnswerIndex:3,explanation:'Mercury is the closest planet to the Sun, orbiting at an average distance of about 57.9 million km.'}
+    ]
+  };
+}
+
+async function step(n,pct){
+  for(let i=1;i<=5;i++){
+    const d=document.getElementById('d'+i), s=document.getElementById('s'+i);
+    if(i<n){d.className='sdot done';s.className='slbl done';}
+    else if(i===n){d.className='sdot act';s.className='slbl act';}
+    else{d.className='sdot';s.className='slbl';}
+  }
+  document.getElementById('progFill').style.width=pct+'%';
+  await sleep(550);
+}
+function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
+
+function showPreview(data){
+  document.getElementById('ps-q').textContent=data.questions.length;
+  document.getElementById('ps-d').textContent=data.duration||60;
+  document.getElementById('ps-o').textContent=4;
+  document.getElementById('editTitle').value=data.examTitle;
+  document.getElementById('qList').innerHTML=data.questions.map(q=>`
+    <div class="q-itm">
+      <div class="q-num">س${q.id}</div>
+      <div class="q-txt">${q.questionText}</div>
+      <div class="q-ans">✓ ${q.options[q.correctAnswerIndex]}</div>
+    </div>`).join('');
+  document.getElementById('prevCard').style.display='block';
+}
+
+async function publishExam(){
+  if(!S.parsed) return;
+  const exam={...S.parsed, examTitle:document.getElementById('editTitle').value||S.parsed.examTitle, id:Date.now(), publishedAt:new Date().toLocaleString('ar-SA')};
+  S.exams.push(exam);
+  await saveExams();
+  toast('✅ تم نشر الامتحان بنجاح!');
+  renderOwnerList();
+  resetUpload();
+}
+
+function renderOwnerList(){
+  const ar=S.lang==='ar';
+  const el=document.getElementById('ownerExamList');
+  if(!S.exams.length){
+    el.innerHTML=`<div class="empty"><div class="empty-ic">📭</div><div>${ar?'لا توجد امتحانات بعد':'No exams yet'}</div></div>`;
+    return;
+  }
+  el.innerHTML=S.exams.map(e=>`
+    <div class="ex-item">
+      <div style="flex:1;min-width:0">
+        <div class="ex-title">${e.examTitle}</div>
+        <div class="ex-meta">${e.questions.length} ${ar?'سؤال':'Q'} · ${e.duration} ${ar?'دقيقة':'min'} · ${e.publishedAt||''}</div>
+      </div>
+      <div class="ex-actions">
+        <button class="btn btn-green btn-sm" onclick="previewOwner(${e.id})">${ar?'معاينة':'Preview'}</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteExam(${e.id})">${ar?'حذف':'Delete'}</button>
+      </div>
+    </div>`).join('');
+}
+
+function previewOwner(id){
+  const e=S.exams.find(x=>x.id===id);
+  if(!e) return;
+  S.parsed=e;
+  showPreview(e);
+  window.scrollTo(0,0);
+}
+
+async function deleteExam(id){
+  S.exams=S.exams.filter(e=>e.id!==id);
+  await saveExams();
+  renderOwnerList();
+  toast(S.lang==='ar'?'تم حذف الامتحان':'Exam deleted');
+}
+
+function resetUpload(){
+  S.file=null; S.parsed=null; S.rawText='';
+  document.getElementById('filePrev').innerHTML='';
+  document.getElementById('fileIn').value='';
+  document.getElementById('progCard').style.display='none';
+  document.getElementById('prevCard').style.display='none';
+  document.getElementById('procBtn').disabled=true;
+  for(let i=1;i<=5;i++){
+    document.getElementById('d'+i).className='sdot';
+    document.getElementById('s'+i).className='slbl';
+  }
+  document.getElementById('progFill').style.width='0%';
+}
+
+/* ═══ STUDENT ═══ */
+function renderStudentList(){
+  const ar=S.lang==='ar';
+  const el=document.getElementById('stExamList');
+  if(!S.exams.length){
+    el.innerHTML=`<div class="empty"><div class="empty-ic">📭</div><div>${ar?'لا توجد امتحانات متاحة حالياً':'No exams available yet'}</div></div>`;
+    return;
+  }
+  el.innerHTML=S.exams.map(e=>`
+    <div class="ex-item" style="cursor:pointer" onclick="startExam(${e.id})">
+      <div style="flex:1">
+        <div class="ex-title">${e.examTitle}</div>
+        <div class="ex-meta">${e.questions.length} ${ar?'سؤال':'Q'} · ${e.duration} ${ar?'دقيقة':'min'}</div>
+      </div>
+      <button class="btn btn-pri btn-sm">${ar?'ابدأ الامتحان →':'Start →'}</button>
+    </div>`).join('');
+}
+
+function startExam(id){
+  const ex=S.exams.find(e=>e.id===id);
+  if(!ex) return;
+  S.cur=ex; S.curQ=0; S.answers={};
+  S.timeLeft=ex.duration*60;
+  document.getElementById('stLobby').style.display='none';
+  document.getElementById('stExam').style.display='block';
+  document.getElementById('stResult').style.display='none';
+  document.getElementById('stExamTitle').textContent=ex.examTitle;
+  document.getElementById('stQCount').textContent=ex.questions.length+(S.lang==='ar'?' سؤال':' Questions');
+  renderNav(); renderQ(); startTimer();
+}
+
+function renderNav(){
+  document.getElementById('qNav').innerHTML=S.cur.questions.map((_,i)=>`
+    <div class="qd ${i===S.curQ?'current':S.answers[i]!==undefined?'answered':''}" onclick="goQ(${i})">${i+1}</div>`).join('');
+}
+
+function renderQ(){
+  const q=S.cur.questions[S.curQ];
+  const tot=S.cur.questions.length;
+  document.getElementById('examProg').style.width=(Object.keys(S.answers).length/tot*100)+'%';
+  const keys=['A','B','C','D','E'];
+  document.getElementById('qArea').innerHTML=`
+    <div class="q-card">
+      <div style="font-size:10px;color:var(--accent);font-family:'JetBrains Mono',monospace;margin-bottom:12px">س${S.curQ+1} / ${tot}</div>
+      <div class="q-body">${q.questionText}</div>
+      <div class="options">${q.options.map((o,i)=>`
+        <div class="opt ${S.answers[S.curQ]===i?'sel':''}" onclick="pickAns(${i})">
+          <div class="opt-k">${keys[i]}</div>
+          <div class="opt-t">${o}</div>
+        </div>`).join('')}
+      </div>
+    </div>`;
+}
+
+function pickAns(i){ S.answers[S.curQ]=i; renderQ(); renderNav(); }
+function goQ(i){ S.curQ=i; renderQ(); renderNav(); }
+function nextQ(){ S.curQ<S.cur.questions.length-1?goQ(S.curQ+1):submitExam(); }
+function prevQ(){ if(S.curQ>0) goQ(S.curQ-1); }
+
+function startTimer(){
+  if(S.timer) clearInterval(S.timer);
+  S.timer=setInterval(()=>{
+    S.timeLeft--;
+    const m=Math.floor(S.timeLeft/60), s=S.timeLeft%60;
+    const el=document.getElementById('timerEl');
+    if(el){ el.textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; el.className='timer'+(S.timeLeft<60?' warn':''); }
+    if(S.timeLeft<=0){clearInterval(S.timer);submitExam();}
+  },1000);
+}
+
+function submitExam(){
+  if(S.timer) clearInterval(S.timer);
+  const ex=S.cur; let corr=0,wrg=0;
+  ex.questions.forEach((q,i)=>{
+    if(S.answers[i]===undefined) return;
+    S.answers[i]===q.correctAnswerIndex?corr++:wrg++;
+  });
+  const skip=ex.questions.length-corr-wrg;
+  const pct=Math.round(corr/ex.questions.length*100);
+  document.getElementById('stExam').style.display='none';
+  document.getElementById('stResult').style.display='block';
+  document.getElementById('resPct').textContent=pct+'%';
+  document.getElementById('rCorr').textContent=corr;
+  document.getElementById('rWrong').textContent=wrg;
+  document.getElementById('rSkip').textContent=skip;
+  const ar=S.lang==='ar';
+  const msg=pct>=90?(ar?'ممتاز! 🎉':'Excellent! 🎉'):pct>=70?(ar?'جيد جداً! 👍':'Very Good! 👍'):pct>=50?(ar?'مقبول ✓':'Pass ✓'):(ar?'يحتاج مراجعة':'Needs Review');
+  document.getElementById('resMsg').textContent=msg;
+  document.getElementById('resSub').textContent=`${corr} ${ar?'من':'of'} ${ex.questions.length}`;
+  const keys=['A','B','C','D','E'];
+  document.getElementById('revArea').innerHTML=ex.questions.map((q,i)=>`
+    <div class="q-card" style="margin-bottom:10px">
+      <div style="font-size:10px;color:var(--accent);font-family:'JetBrains Mono',monospace;margin-bottom:8px">س${i+1}</div>
+      <div class="q-body" style="font-size:13px;margin-bottom:10px">${q.questionText}</div>
+      ${q.options.map((o,j)=>`<div class="opt ${j===q.correctAnswerIndex?'cor':''}${j===S.answers[i]&&j!==q.correctAnswerIndex?' wrg':''}" style="cursor:default;margin-bottom:5px"><div class="opt-k">${keys[j]}</div><div class="opt-t">${o}</div></div>`).join('')}
+      ${q.explanation?`<div class="expl"><strong>${ar?'الشرح:':'Explanation:'}</strong>${q.explanation}</div>`:''}
+    </div>`).join('');
+}
+
+function backLobby(){
+  document.getElementById('stResult').style.display='none';
+  document.getElementById('stLobby').style.display='block';
+  S.cur=null;
+}
+
+/* ═══ TOAST ═══ */
+function toast(msg){
+  const el=document.getElementById('toast');
+  el.textContent=msg; el.className='toast show';
+  setTimeout(()=>el.className='toast',3000);
+}
+
+/* ═══ INIT ═══ */
+applyLangTexts();
+</script>
+</body>
+</html>

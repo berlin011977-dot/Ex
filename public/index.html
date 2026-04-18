@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة الامتحانات</title>
+  <meta
+    name="description"
+    content="منصة امتحانات بسيطة وخفيفة تعمل على الجوال والكمبيوتر مع اشتراط اسم الطالب قبل بدء الامتحان."
+  >
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <h1 class="brand-title">منصة الامتحانات</h1>
+        <p class="brand-sub">واجهة بسيطة للطلاب ولوحة نشر للمالك</p>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="btn ghost" id="homeBtn" type="button">الرئيسية</button>
+        <button class="btn ghost" id="studentBtn" type="button">الطلاب</button>
+        <button class="btn primary" id="ownerBtn" type="button">المالك</button>
+      </div>
+    </header>
+
+    <main class="page-wrap">
+      <section class="view" id="homeView">
+        <section class="panel hero-simple">
+          <span class="small-badge">جاهز للطلاب</span>
+          <h2>منصة امتحانات بسيطة وسريعة</h2>
+          <p class="subtle">
+            اكتب اسمك ثم ادخل صفحة الطلاب لبدء أي امتحان منشور.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn primary" id="heroStudentBtn" type="button">دخول الطلاب</button>
+            <button class="btn ghost" id="heroOwnerBtn" type="button">لوحة المالك</button>
+          </div>
+
+          <div class="home-stats single-stat">
+            <div class="mini-stat">
+              <strong id="homeExamCount">0</strong>
+              <span>عدد الامتحانات المنشورة</span>
+            </div>
+          </div>
+        </section>
+
+        <div id="homeExamList" class="hidden"></div>
+        <div id="homeUploadLimit" class="hidden"></div>
+        <div id="aiBadge" class="hidden"></div>
+        <div id="formatBadge" class="hidden"></div>
+      </section>
+
+      <section class="view hidden" id="ownerView">
+        <div class="section-head section-gap">
+          <div>
+            <h2>لوحة المالك</h2>
+            <p class="subtle">ارفع الملف، راجع الناتج، ثم انشره للطلاب.</p>
+          </div>
+
+          <div class="topbar-actions">
+            <span class="small-badge owner-badge">وضع المالك</span>
+            <button class="btn ghost" id="ownerLogoutBtn" type="button">تسجيل خروج</button>
+          </div>
+        </div>
+
+        <div class="owner-grid">
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <h3>رفع ومعالجة امتحان</h3>
+                <p class="subtle">لو الملف ما كان واضح، الصق النص يدوياً لتحصل على نتيجة أدق.</p>
+              </div>
+            </div>
+
+            <form id="processForm" class="form-stack">
+              <label class="upload-drop">
+                <input id="examFileInput" name="examFile" type="file" accept=".txt,.pdf,.docx">
+                <span class="upload-title">اختر ملف الأسئلة</span>
+                <span class="upload-sub">TXT أو PDF أو DOCX</span>
+              </label>
+
+              <div class="file-chip" id="fileChip">لم يتم اختيار أي ملف بعد.</div>
+
+              <label class="field">
+                <span>أو الصق نص الامتحان يدوياً</span>
+                <textarea
+                  id="manualTextInput"
+                  name="manualText"
+                  rows="8"
+                  placeholder="مثال:
+1) ما هي عاصمة السودان؟
+A) الخرطوم
+B) مدني
+C) كسلا
+D) بورتسودان
+Correct Answer: A"
+                ></textarea>
+              </label>
+
+              <div class="inline-grid">
+                <label class="field">
+                  <span>المدة بالدقائق</span>
+                  <input id="durationInput" name="duration" type="number" min="5" max="300" value="60">
+                </label>
+
+                <label class="field">
+                  <span>تعليمات للطلاب</span>
+                  <input
+                    id="instructionsInput"
+                    name="extraInstructions"
+                    type="text"
+                    placeholder="مثال: أجب عن كل الأسئلة"
+                  >
+                </label>
+              </div>
+
+              <button class="btn primary wide" id="processBtn" type="submit">تحليل الامتحان</button>
+              <div class="status-box" id="processStatus">جاهز لتحليل الملف.</div>
+            </form>
+          </section>
+
+          <section class="panel" id="previewPanel">
+            <div class="section-head">
+              <div>
+                <h3>المعاينة قبل النشر</h3>
+                <p class="subtle">راجع عدد الأسئلة والإجابات الصحيحة قبل ما تنشر الامتحان.</p>
+              </div>
+            </div>
+
+            <div id="previewEmpty" class="empty-card">
+              <p>بعد التحليل ستظهر هنا معاينة الامتحان.</p>
+            </div>
+
+            <div id="previewContent" class="hidden">
+              <div class="home-stats compact-stats">
+                <div class="mini-stat">
+                  <strong id="previewQuestionCount">0</strong>
+                  <span>سؤال</span>
+                </div>
+                <div class="mini-stat">
+                  <strong id="previewDuration">0</strong>
+                  <span>المدة</span>
+                </div>
+              </div>
+
+              <label class="field">
+                <span>عنوان الامتحان</span>
+                <input id="previewTitleInput" type="text">
+              </label>
+
+              <label class="field">
+                <span>تعليمات تظهر للطلاب</span>
+                <textarea id="previewInstructionsInput" rows="3"></textarea>
+              </label>
+
+              <div id="previewQuestions" class="question-preview-list"></div>
+
+              <div class="action-row">
+                <button class="btn ghost" id="addQuestionBtn" type="button">إضافة سؤال</button>
+                <button class="btn primary" id="publishBtn" type="button">نشر الامتحان</button>
+                <button class="btn ghost" id="clearPreviewBtn" type="button">إلغاء المعاينة</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="section-head">
+            <div>
+              <h3>الامتحانات المنشورة</h3>
+              <p class="subtle">يمكنك معاينتها أو حذفها عند الحاجة.</p>
+            </div>
+          </div>
+
+          <div id="ownerExamList" class="exam-list empty-state">
+            <div class="empty-card">
+              <p>لا توجد امتحانات منشورة حتى الآن.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="section-head">
+            <div>
+              <h3>نتائج الطلاب</h3>
+              <p class="subtle">كل النتائج المرسلة تظهر هنا للمالك فقط.</p>
+            </div>
+          </div>
+
+          <div id="ownerResultsList" class="exam-list empty-state">
+            <div class="empty-card">
+              <p>لا توجد نتائج طلاب حتى الآن.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="view hidden" id="studentView">
+        <div id="studentLobby">
+          <section class="panel student-entry">
+            <div class="section-head">
+              <div>
+                <h2>ابدأ الامتحان</h2>
+                <p class="subtle">لن يبدأ الامتحان إلا بعد كتابة اسم الطالب.</p>
+              </div>
+            </div>
+
+            <div class="inline-grid">
+              <label class="field">
+                <span>اسم الطالب</span>
+                <input id="studentNameInput" type="text" placeholder="اكتب اسمك هنا">
+              </label>
+
+              <div class="note-box">
+                <strong>مهم</strong>
+                <p id="studentNameStatus">اكتب الاسم أولاً ثم اختر الامتحان من القائمة.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="section-head">
+              <div>
+                <h3>الامتحانات المتاحة</h3>
+                <p class="subtle">بعد تسجيل الاسم يمكن الضغط على بدء الامتحان.</p>
+              </div>
+            </div>
+
+            <div id="studentExamList" class="exam-list empty-state">
+              <div class="empty-card">
+                <p>لا توجد امتحانات متاحة حالياً.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="studentExam" class="hidden">
+          <section class="exam-shell">
+            <div class="exam-topline">
+              <div>
+                <div class="name-pill">الطالب: <strong id="studentCurrentName">-</strong></div>
+                <h2 id="studentExamTitle">عنوان الامتحان</h2>
+                <p id="studentExamInstructions" class="subtle">تعليمات الامتحان ستظهر هنا.</p>
+              </div>
+
+              <div class="timer-box">
+                <span>الوقت المتبقي</span>
+                <strong id="timerText">00:00</strong>
+              </div>
+            </div>
+
+            <div class="progress-wrap">
+              <div class="progress-bar">
+                <div class="progress-fill" id="examProgressBar"></div>
+              </div>
+              <div class="progress-meta" id="progressMeta">0 / 0</div>
+            </div>
+
+            <div class="question-nav" id="questionNav"></div>
+            <div id="questionCard"></div>
+
+            <div class="action-row">
+              <button class="btn ghost" id="prevQuestionBtn" type="button">السابق</button>
+              <button class="btn primary" id="nextQuestionBtn" type="button">التالي</button>
+              <button class="btn danger" id="submitExamBtn" type="button">إنهاء الامتحان</button>
+            </div>
+          </section>
+        </div>
+
+        <div id="studentResult" class="hidden">
+          <section class="panel result-panel">
+            <div class="section-head">
+              <div class="result-copy">
+                <h2 id="resultTitle">انتهى الامتحان</h2>
+                <p id="resultSummary" class="subtle">النتيجة النهائية ستظهر هنا.</p>
+              </div>
+              <div class="result-box" id="resultScore">0%</div>
+            </div>
+
+            <div class="home-stats compact-stats">
+              <div class="mini-stat">
+                <strong id="resultCorrect">0</strong>
+                <span>صحيح</span>
+              </div>
+              <div class="mini-stat">
+                <strong id="resultWrong">0</strong>
+                <span>خطأ</span>
+              </div>
+              <div class="mini-stat">
+                <strong id="resultSkipped">0</strong>
+                <span>متروك</span>
+              </div>
+            </div>
+
+            <div class="section-head review-gap">
+              <div>
+                <h3>مراجعة الإجابات</h3>
+                <p class="subtle">تظهر بعد إرسال الامتحان مباشرة.</p>
+              </div>
+            </div>
+
+            <div id="reviewList" class="question-preview-list"></div>
+
+            <div class="action-row">
+              <button class="btn ghost" id="backToLobbyBtn" type="button">العودة للقائمة</button>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal hidden" id="ownerModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeOwnerModalBtn" type="button" aria-label="إغلاق">×</button>
+      <h3>دخول المالك</h3>
+      <p class="subtle">أدخل كلمة المرور لفتح لوحة التحكم.</p>
+
+      <form id="ownerLoginForm" class="form-stack">
+        <label class="field">
+          <span>كلمة المرور</span>
+          <input id="ownerPasswordInput" type="password" placeholder="أدخل كلمة المرور" required>
+        </label>
+        <button class="btn primary wide" type="submit">دخول لوحة المالك</button>
+        <div class="status-box" id="ownerLoginStatus">بانتظار إدخال كلمة المرور.</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

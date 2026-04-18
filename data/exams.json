@@ -1,0 +1,1978 @@
+[
+  {
+    "id": "1423e273-8911-42f9-b4de-573a05585a89",
+    "examTitle": "PROGRAMMING FUNDAMENTALS",
+    "duration": 60,
+    "instructions": "",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple_choice",
+        "questionText": "A person responsible for designing, writing, and modifying computer programs is called a:",
+        "options": [
+          "System analyst",
+          "Computer programmer",
+          "Hardware engineer",
+          "Network administrator"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "System analyst",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"System analyst\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 2,
+        "type": "multiple_choice",
+        "questionText": "System programmers write programs that provide interface and functionality to:",
+        "options": [
+          "Application software",
+          "Databases",
+          "Hardware components",
+          "Internet protocols"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Application software",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Application software\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 3,
+        "type": "multiple_choice",
+        "questionText": "The first phase of the Program Development Cycle is:",
+        "options": [
+          "Coding",
+          "Testing and Debugging",
+          "Problem Analysis",
+          "Documentation"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Coding",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Coding\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 4,
+        "type": "multiple_choice",
+        "questionText": "An algorithm is defined as a finite sequence of explicit instructions that:",
+        "options": [
+          "Runs indefinitely until memory is full",
+          "Produces output for a set of inputs and then terminates",
+          "Requires a computer to execute",
+          "Must be written in a high-level language"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Runs indefinitely until memory is full",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Runs indefinitely until memory is full\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 5,
+        "type": "multiple_choice",
+        "questionText": "A flowchart is best described as:",
+        "options": [
+          "A type of programming language",
+          "A pictorial representation of an algorithm using shapes and arrows",
+          "A written explanation of a program",
+          "A table of conditions and actions"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "A type of programming language",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"A type of programming language\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 6,
+        "type": "multiple_choice",
+        "questionText": "In pseudocode, the keyword used to indicate an OUTPUT operation is:",
+        "options": [
+          "GET",
+          "READ",
+          "PRINT",
+          "COMPUTE"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "GET",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"GET\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 7,
+        "type": "multiple_choice",
+        "questionText": "A decision table consists of how many quadrants?",
+        "options": [
+          "Two",
+          "Three",
+          "Four",
+          "Five"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Two",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Two\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 8,
+        "type": "multiple_choice",
+        "questionText": "Which testing technique requires NO prior knowledge of the internal architecture?",
+        "options": [
+          "White box testing",
+          "Black box testing",
+          "Integration testing",
+          "Unit testing"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "White box testing",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"White box testing\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 9,
+        "type": "multiple_choice",
+        "questionText": "Syntax errors in a program are also known as:",
+        "options": [
+          "Logical errors",
+          "Runtime errors",
+          "Grammatical errors",
+          "Semantic errors"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Logical errors",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Logical errors\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 10,
+        "type": "multiple_choice",
+        "questionText": "Which generation of programming language uses abbreviations instead of binary numbers?",
+        "options": [
+          "Machine language (1GL)",
+          "Assembly language (2GL)",
+          "High-level language (3GL)",
+          "Fourth-generation language (4GL)"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Machine language (1GL)",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Machine language (1GL)\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 11,
+        "type": "multiple_choice",
+        "questionText": "A program that translates assembly language into machine language is called:",
+        "options": [
+          "Compiler",
+          "Interpreter",
+          "Assembler",
+          "Linker"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Compiler",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Compiler\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 12,
+        "type": "multiple_choice",
+        "questionText": "Most high-level languages are:",
+        "options": [
+          "Machine dependent",
+          "Assembly dependent",
+          "Not machine dependent",
+          "Only usable on Windows"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Machine dependent",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Machine dependent\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 13,
+        "type": "multiple_choice",
+        "questionText": "Which of the following is NOT a valid C++ variable name?",
+        "options": [
+          "student_name",
+          "age1",
+          "1age",
+          "count"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "student_name",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"student_name\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 14,
+        "type": "multiple_choice",
+        "questionText": "C++ names are:",
+        "options": [
+          "Case-insensitive",
+          "Case-sensitive",
+          "Converted to uppercase by the compiler",
+          "Limited to 8 characters"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Case-insensitive",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Case-insensitive\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 15,
+        "type": "multiple_choice",
+        "questionText": "The memory size of a char variable in C++ is:",
+        "options": [
+          "1 byte",
+          "2 bytes",
+          "4 bytes",
+          "8 bytes"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "1 byte",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"1 byte\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 16,
+        "type": "true_false",
+        "questionText": "Which C++ data type stores a value of true or false?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 17,
+        "type": "multiple_choice",
+        "questionText": "The memory size of a double data type in C++ is:",
+        "options": [
+          "2 bytes",
+          "4 bytes",
+          "8 bytes",
+          "16 bytes"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "2 bytes",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"2 bytes\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 18,
+        "type": "multiple_choice",
+        "questionText": "To declare a constant in C++, which keyword is used?",
+        "options": [
+          "static",
+          "final",
+          "const",
+          "fixed"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "static",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"static\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 19,
+        "type": "multiple_choice",
+        "questionText": "The modulus operator (%) returns:",
+        "options": [
+          "The quotient of two numbers",
+          "The product of two numbers",
+          "The remainder when one number is divided by another",
+          "The absolute difference between two numbers"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "The quotient of two numbers",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"The quotient of two numbers\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 20,
+        "type": "multiple_choice",
+        "questionText": "Which operator checks if two values are NOT equal in C++?",
+        "options": [
+          "==",
+          "!=",
+          "<>",
+          "~="
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "==",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"==\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 21,
+        "type": "multiple_choice",
+        "questionText": "The pre-increment operator (++x) in C++ does which of the following?",
+        "options": [
+          "Returns x, then increments x by one",
+          "Increments x by one, then returns x",
+          "Decrements x by one",
+          "Multiplies x by two"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Returns x, then increments x by one",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Returns x, then increments x by one\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 22,
+        "type": "multiple_choice",
+        "questionText": "Comments in C++ are used to:",
+        "options": [
+          "Speed up program execution",
+          "Declare variables",
+          "Help programmers understand the code; they are ignored by the compiler",
+          "Define functions"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Speed up program execution",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Speed up program execution\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 23,
+        "type": "multiple_choice",
+        "questionText": "Which header file must be included to use cin and cout in C++?",
+        "options": [
+          "<stdio.h>",
+          "<iostream.h>",
+          "<math.h>",
+          "<string.h>"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "<stdio.h>",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"<stdio.h>\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 24,
+        "type": "multiple_choice",
+        "questionText": "The main() function in C++ is:",
+        "options": [
+          "Optional in every program",
+          "The point where all C++ programs start their execution",
+          "A library function",
+          "Only used in large programs"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Optional in every program",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Optional in every program\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 25,
+        "type": "multiple_choice",
+        "questionText": "Which of the following is used to input data from the keyboard in C++?",
+        "options": [
+          "cout",
+          "printf",
+          "cin",
+          "scanf"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "cout",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"cout\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 26,
+        "type": "multiple_choice",
+        "questionText": "The if...else statement is also known as:",
+        "options": [
+          "Single-selection statement",
+          "Double-selection statement",
+          "Multi-selection statement",
+          "Loop statement"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Single-selection statement",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Single-selection statement\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 27,
+        "type": "multiple_choice",
+        "questionText": "The conditional operator in C++ uses which symbols?",
+        "options": [
+          "&& ||",
+          "?:",
+          "++ --",
+          ">> <<"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "&& ||",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"&& ||\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 28,
+        "type": "multiple_choice",
+        "questionText": "When multiple statements need to be controlled by one if statement, they should be enclosed in:",
+        "options": [
+          "Parentheses ( )",
+          "Square brackets [ ]",
+          "Curly brackets { }",
+          "Angle brackets < >"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Parentheses ( )",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Parentheses ( )\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 29,
+        "type": "multiple_choice",
+        "questionText": "The 'dangling else' rule in C++ states that an else goes with:",
+        "options": [
+          "The first unmatched if",
+          "The closest unmatched if",
+          "The outermost if",
+          "The last if in the program"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "The first unmatched if",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"The first unmatched if\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 30,
+        "type": "multiple_choice",
+        "questionText": "In a switch statement, which keyword is used as the default action when no case matches?",
+        "options": [
+          "default",
+          "else",
+          "otherwise",
+          "other"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "default",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"default\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 31,
+        "type": "true_false",
+        "questionText": "An application programmer writes programs that control the computer hardware. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 32,
+        "type": "true_false",
+        "questionText": "The optimum solution to a problem is chosen during the Task Analysis phase. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 33,
+        "type": "true_false",
+        "questionText": "Algorithm testing should take place after the actual coding is done. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 34,
+        "type": "true_false",
+        "questionText": "Logical errors are harder to detect than syntax errors. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 35,
+        "type": "true_false",
+        "questionText": "White box testing requires knowledge of the internal workings of the program. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 36,
+        "type": "true_false",
+        "questionText": "Documentation helps users understand the program and enables future modification. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 37,
+        "type": "true_false",
+        "questionText": "Machine language programs are written using abbreviations for instructions. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 38,
+        "type": "true_false",
+        "questionText": "A compiler translates high-level language into machine language. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 39,
+        "type": "true_false",
+        "questionText": "C++ variable names can begin with a number. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 40,
+        "type": "true_false",
+        "questionText": "Reserved words (keywords) can be used as variable names in C++. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 41,
+        "type": "short_answer",
+        "questionText": "سؤال 41",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 42,
+        "type": "true_false",
+        "questionText": "A float data type has greater precision than a double. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 43,
+        "type": "true_false",
+        "questionText": "A boolean variable in C++ can store values like 'yes' or 'no'. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 44,
+        "type": "true_false",
+        "questionText": "String variables in C++ store a set of characters. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 45,
+        "type": "true_false",
+        "questionText": "The += operator is equivalent to x = x + y. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 46,
+        "type": "true_false",
+        "questionText": "The post-decrement operator returns the variable and then decrements it. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 47,
+        "type": "true_false",
+        "questionText": "An end-of-line comment in C++ is introduced with the /* symbol. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 48,
+        "type": "true_false",
+        "questionText": "The #include <iostream.h> directive allows the use of cin and cout. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 49,
+        "type": "true_false",
+        "questionText": "In an if statement, parentheses around the condition are optional in C++. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 50,
+        "type": "true_false",
+        "questionText": "Repetition statements are also called looping statements. [ TRUE / FALSE ]",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 51,
+        "type": "short_answer",
+        "questionText": "A _______________________ is a pictorial representation of an algorithm.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 52,
+        "type": "short_answer",
+        "questionText": "The collection of instructions forms a program, and a group of programs forms _______________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 53,
+        "type": "short_answer",
+        "questionText": "In flowcharts, the logical flow between steps is indicated by _______________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 54,
+        "type": "short_answer",
+        "questionText": "DO WHILE-ENDDO tests the condition at the _______________________ of the loop.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 55,
+        "type": "short_answer",
+        "questionText": "REPEAT-UNTIL tests the condition at the _______________________ of the loop.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 56,
+        "type": "short_answer",
+        "questionText": "_______________________ errors occur when rules of the programming language are not followed.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 57,
+        "type": "short_answer",
+        "questionText": "A program that translates assembly language into machine language is called an _______________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 58,
+        "type": "short_answer",
+        "questionText": "In C++, names are _______________________ -sensitive.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 59,
+        "type": "short_answer",
+        "questionText": "The keyword _______________________ is used to declare a constant in C++.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 60,
+        "type": "true_false",
+        "questionText": "A _______________________ variable stores one of two values: true or false.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 61,
+        "type": "short_answer",
+        "questionText": "The _______________________ operator returns the remainder of a division.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 62,
+        "type": "short_answer",
+        "questionText": "The operator == checks for _______________________ between two values.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 63,
+        "type": "short_answer",
+        "questionText": "A _______________________ comment in C++ is enclosed between /* and */.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 64,
+        "type": "short_answer",
+        "questionText": "The first function executed in every C++ program is _______________________ ().",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 65,
+        "type": "short_answer",
+        "questionText": "The directive _______________________ must be included to use cout and cin.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 66,
+        "type": "short_answer",
+        "questionText": "To output data to the screen in C++, we use the object _______________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 67,
+        "type": "short_answer",
+        "questionText": "An if statement that has no else clause is also known as a _______________________ -selection statement.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 68,
+        "type": "short_answer",
+        "questionText": "Multiple statements controlled by a single if must be enclosed in _______________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 69,
+        "type": "short_answer",
+        "questionText": "The conditional operator in C++ is represented by the symbols _______________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 70,
+        "type": "multiple_choice",
+        "questionText": "The _______________________ statement allows multi-way selection based on the value of an expression.",
+        "options": [
+          "Algorithm",
+          "Flowchart",
+          "Pseudocode",
+          "Compiler",
+          "Debugging",
+          "bool"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Algorithm",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Algorithm\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 71,
+        "type": "multiple_choice",
+        "questionText": "List the EIGHT phases of the Program Development Cycle in order:",
+        "options": [
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________ g) _______________________________________________ h) _______________________________________________"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "_______________________________________________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"_______________________________________________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 72,
+        "type": "multiple_choice",
+        "questionText": "List the FIVE mathematical operators in C++ with their names:",
+        "options": [
+          "Operator: _____________ Name: _________________________",
+          "Operator: _____________ Name: _________________________",
+          "Operator: _____________ Name: _________________________",
+          "Operator: _____________ Name: _________________________",
+          "Operator: _____________ Name: _________________________"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Operator: _____________ Name: _________________________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Operator: _____________ Name: _________________________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 73,
+        "type": "multiple_choice",
+        "questionText": "List SIX C++ data types:",
+        "options": [
+          "____________ b) ____________ c) ____________",
+          "____________ e) ____________ f) ____________"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "____________ b) ____________ c) ____________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"____________ b) ____________ c) ____________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 74,
+        "type": "multiple_choice",
+        "questionText": "List the THREE types of control statements covered in the lectures:",
+        "options": [
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "_______________________________________________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"_______________________________________________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 75,
+        "type": "multiple_choice",
+        "questionText": "List FIVE properties of a well-defined algorithm:",
+        "options": [
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________ Section 6: Short Answer / Brief Explanation (25 marks — varies) Instructions: Answer each question briefly but completely. Partial credit may be awarded. 1 (3 marks). Explain the difference between a system programmer and an application programmer. _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ 2 (3 marks). What is the difference between black box testing and white box testing? _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ 3 (2 marks). What is the purpose of the #include <iostream.h> directive in a C++ program? _______________________________________________________________ _______________________________________________________________ 4 (3 marks). Explain the difference between pre-increment (++x) and post-increment (x++) in C++. _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ 5 (2 marks). What is a compound statement in C++? Give an example. _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ 6 (3 marks). Write the syntax of the if...else statement in C++ and provide a simple example. _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ 7 (3 marks). Explain the 'dangling else' problem in C++ and how it is resolved. _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ 8 (3 marks). Explain the difference between a syntax error and a logical error. Which is harder to detect and why? _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ 9 (3 marks). What are the four quadrants of a decision table and what does each contain? _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ 10 (3 marks). Write a short C++ program that reads an integer from the user and prints 'Positive' if it is greater than zero, and 'Non-positive' otherwise. _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ ANSWER KEY — FOR INSTRUCTOR USE ONLY Section 1: Multiple Choice Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 B C C B B C C B C B Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18 Q19 Q20 C C C B B C C C C B Q21 Q22 Q23 Q24 Q25 Q26 Q27 Q28 Q29 Q30 B C B B C B B C B A Section 2: True / False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "_______________________________________________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"_______________________________________________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 76,
+        "type": "multiple_choice",
+        "questionText": "Arrows (interconnecting arrows)",
+        "options": [
+          "Top",
+          "Bottom",
+          "Syntax 7. Assembler 8. Case 9. const"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Top",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Top\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 77,
+        "type": "short_answer",
+        "questionText": "bool / Boolean",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 78,
+        "type": "short_answer",
+        "questionText": "Modulus / % 12. Equality 13. Block 14. main 15. #include <iostream.h> 16. cout 17. Single",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 79,
+        "type": "short_answer",
+        "questionText": "Curly brackets { }",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 80,
+        "type": "multiple_choice",
+        "questionText": "?: 20. switch Section 4: Matching",
+        "options": [
+          "Matching",
+          "B",
+          "E",
+          "C",
+          "A",
+          "D"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Matching",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Matching\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 81,
+        "type": "multiple_choice",
+        "questionText": "Eight phases of the PDC:",
+        "options": [
+          "Problem Analysis b) Task Analysis c) Algorithm Development d) Algorithm Testing",
+          "Coding f) Testing and Debugging g) Documentation h) Implementation (+Maintenance & Enhancement)",
+          "Five operators:",
+          "+ Addition b) - Subtraction c) * Multiplication d) / Division e) % Modulus"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Problem Analysis b) Task Analysis c) Algorithm Development d) Algorithm Testing",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Problem Analysis b) Task Analysis c) Algorithm Development d) Algorithm Testing\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 82,
+        "type": "short_answer",
+        "questionText": "Six data types: char, int, short, long, float, double, bool, string (any six)",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 83,
+        "type": "multiple_choice",
+        "questionText": "Three control statements:",
+        "options": [
+          "Three control statements:",
+          "Sequence",
+          "Selection (if / if-else / nested if / switch)",
+          "Repetition (while / do-while / for)"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Three control statements:",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Three control statements:\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 84,
+        "type": "multiple_choice",
+        "questionText": "Five algorithm properties:",
+        "options": [
+          "No ambiguity in any instruction",
+          "No uncertainty about which instruction is next",
+          "Description must be finite (cannot be open-ended)",
+          "Must terminate after a finite number of steps",
+          "Must be general enough to handle any contingency Section 6: Short Answer — Model Answers"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "No ambiguity in any instruction",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"No ambiguity in any instruction\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 85,
+        "type": "short_answer",
+        "questionText": "System programmer: writes programs controlling/interfacing hardware (e.g. OS). Application programmer: writes programs for specific user tasks (e.g. inventory, payroll).",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 86,
+        "type": "short_answer",
+        "questionText": "Black box: tester has no knowledge of internal code; only inputs/outputs known. White box: tester uses explicit knowledge of code structure to design tests.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 87,
+        "type": "short_answer",
+        "questionText": "Tells the preprocessor to include the iostream header, enabling use of cout (output) and cin (input) for screen/keyboard interaction.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 88,
+        "type": "short_answer",
+        "questionText": "++x (pre): increments x first, then returns the NEW value. x++ (post): returns the CURRENT value first, then increments x.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 89,
+        "type": "multiple_choice",
+        "questionText": "A group of two or more statements enclosed in { } treated as one statement. e.g. if (x<5) { x=x+10; cout<<x; }",
+        "options": [
+          "A group of two or more statements enclosed in { } treated as one statement.",
+          "g. if (x<5) { x=x+10; cout<<x; }"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "A group of two or more statements enclosed in { } treated as one statement.",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"A group of two or more statements enclosed in { } treated as one statement.\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 90,
+        "type": "multiple_choice",
+        "questionText": "Syntax: if (condition) statement1; else statement2; e.g. if (grade>=50) cout<<\"Passed\"; else cout<<\"Failed\";",
+        "options": [
+          "Syntax: if (condition) statement1; else statement2;",
+          "g. if (grade>=50) cout<<\"Passed\"; else cout<<\"Failed\";"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Syntax: if (condition) statement1; else statement2;",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Syntax: if (condition) statement1; else statement2;\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 91,
+        "type": "short_answer",
+        "questionText": "Ambiguity about which if an else belongs to in nested ifs. Rule: else goes with the CLOSEST unmatched if. Fix: use { } to group the inner if.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 92,
+        "type": "short_answer",
+        "questionText": "Syntax error: violates language grammar — compiler flags it (easier). Logical error: flaw in program logic — no error message; program runs but gives wrong output (harder to find).",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 93,
+        "type": "multiple_choice",
+        "questionText": "(1) Conditions: all possible conditions. (2) Condition Alternatives: possible values for each condition. (3) Actions: operations to perform. (4) Action Entries: which actions to take for each combination.",
+        "options": [
+          "Conditions: all possible conditions.",
+          "Condition Alternatives: possible values for each condition.",
+          "Actions: operations to perform.",
+          "Action Entries: which actions to take for each combination."
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Conditions: all possible conditions.",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Conditions: all possible conditions.\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 94,
+        "type": "short_answer",
+        "questionText": "سؤال 94",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      }
+    ],
+    "publishedAt": "١٨‏/٠٤‏/٢٠٢٦، ٣:٠٣ ص",
+    "publishedAtIso": "2026-04-18T01:03:56.412Z"
+  },
+  {
+    "id": "4d2dd339-8ade-4ed7-b0b9-499983e589f7",
+    "examTitle": "PROGRAMMING FUNDAMENTALS",
+    "duration": 60,
+    "instructions": "",
+    "questions": [
+      {
+        "id": 1,
+        "type": "short_answer",
+        "questionText": "An application programmer writes programs that control the computer hardware. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 2,
+        "type": "short_answer",
+        "questionText": "The optimum solution to a problem is chosen during the Task Analysis phase. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 3,
+        "type": "short_answer",
+        "questionText": "Algorithm testing should take place after the actual coding is done. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 4,
+        "type": "short_answer",
+        "questionText": "Logical errors are harder to detect than syntax errors. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 5,
+        "type": "short_answer",
+        "questionText": "White box testing requires knowledge of the internal workings of the program. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 6,
+        "type": "short_answer",
+        "questionText": "Documentation helps users understand the program and enables future modification. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 7,
+        "type": "short_answer",
+        "questionText": "Machine language programs are written using abbreviations for instructions. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 8,
+        "type": "short_answer",
+        "questionText": "A compiler translates high-level language into machine language. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 9,
+        "type": "short_answer",
+        "questionText": "C++ variable names can begin with a number. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 10,
+        "type": "short_answer",
+        "questionText": "Reserved words (keywords) can be used as variable names in C++. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": ".",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \".\"."
+      },
+      {
+        "id": 11,
+        "type": "short_answer",
+        "questionText": "سؤال 11",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "K",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"K\"."
+      },
+      {
+        "id": 12,
+        "type": "short_answer",
+        "questionText": "A float data type has greater precision than a double. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "L",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"L\"."
+      },
+      {
+        "id": 13,
+        "type": "short_answer",
+        "questionText": "A boolean variable in C++ can store values like 'yes' or 'no'. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "M",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"M\"."
+      },
+      {
+        "id": 14,
+        "type": "short_answer",
+        "questionText": "String variables in C++ store a set of characters. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "N",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"N\"."
+      },
+      {
+        "id": 15,
+        "type": "short_answer",
+        "questionText": "The += operator is equivalent to x = x + y. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "O",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"O\"."
+      },
+      {
+        "id": 16,
+        "type": "short_answer",
+        "questionText": "The post-decrement operator returns the variable and then decrements it. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "16. cout",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"16. cout\"."
+      },
+      {
+        "id": 17,
+        "type": "short_answer",
+        "questionText": "An end-of-line comment in C++ is introduced with the /* symbol. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "17. Single",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"17. Single\"."
+      },
+      {
+        "id": 18,
+        "type": "short_answer",
+        "questionText": "The #include <iostream.h> directive allows the use of cin and cout. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "18. Curly brackets / { }",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"18. Curly brackets / { }\"."
+      },
+      {
+        "id": 19,
+        "type": "short_answer",
+        "questionText": "In an if statement, parentheses around the condition are optional in C++. ___",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "19. ?:",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"19. ?:\"."
+      },
+      {
+        "id": 20,
+        "type": "short_answer",
+        "questionText": "Repetition statements are also called looping statements. ___ Section 3: Fill in the Blanks Instructions: Write the correct word or phrase in each blank. (1 mark each)",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "20. switch",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"20. switch\"."
+      },
+      {
+        "id": 21,
+        "type": "short_answer",
+        "questionText": "A __________________ is a pictorial representation of an algorithm.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 22,
+        "type": "short_answer",
+        "questionText": "The collection of instructions forms a program, and a group of programs forms __________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 23,
+        "type": "short_answer",
+        "questionText": "In flowcharts, the logical flow between steps is indicated by __________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 24,
+        "type": "short_answer",
+        "questionText": "DO WHILE-ENDDO tests the condition at the __________________ of the loop.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 25,
+        "type": "short_answer",
+        "questionText": "REPEAT-UNTIL tests the condition at the __________________ of the loop.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 26,
+        "type": "short_answer",
+        "questionText": "__________________ errors occur when rules of the programming language are not followed.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 27,
+        "type": "short_answer",
+        "questionText": "A program that translates assembly language into machine language is called an __________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 28,
+        "type": "short_answer",
+        "questionText": "In C++, names are __________________ -sensitive.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 29,
+        "type": "short_answer",
+        "questionText": "The keyword __________________ is used to declare a constant in C++.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 30,
+        "type": "true_false",
+        "questionText": "A __________________ variable stores one of two values: true or false.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 31,
+        "type": "short_answer",
+        "questionText": "The __________________ operator returns the remainder of a division.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 32,
+        "type": "short_answer",
+        "questionText": "The operator == checks for __________________ between two values.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 33,
+        "type": "short_answer",
+        "questionText": "A __________________ comment in C++ is enclosed between /* and */.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 34,
+        "type": "short_answer",
+        "questionText": "The first function executed in every C++ program is __________________ ().",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 35,
+        "type": "short_answer",
+        "questionText": "The directive __________________ must be included to use cout and cin.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 36,
+        "type": "short_answer",
+        "questionText": "To output data to the screen in C++, we use the object __________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 37,
+        "type": "short_answer",
+        "questionText": "An if statement that has no else clause is also known as a __________________ -selection statement.",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 38,
+        "type": "short_answer",
+        "questionText": "Multiple statements controlled by a single if must be enclosed in __________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 39,
+        "type": "short_answer",
+        "questionText": "The conditional operator in C++ is represented by the symbols __________________ .",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 40,
+        "type": "multiple_choice",
+        "questionText": "The __________________ statement allows multi-way selection based on the value of an expression. Section 4: Matching Instructions: Match each term in Column A with the correct description in Column B. Write the letter in the blank. (1 mark each) Column A — Term Column B — Description ___ 1. Algorithm",
+        "options": [
+          "Translates high-level language to machine language ___ 2. Flowchart",
+          "A finite sequence of steps to solve a problem ___ 3. Pseudocode",
+          "Informal, structured language describing logic ___ 4. Compiler",
+          "Detects, isolates and corrects bugs ___ 5. Debugging",
+          "Pictorial representation of algorithm steps ___ 6. bool",
+          "C++ data type storing true or false ___ 7. cin G. Used to input data from the keyboard ___ 8. cout H. Used to output data to the screen ___ 9. const I. Keyword to declare a constant ___ 10. #include J. Preprocessor directive to include header files ___ 11. Modulus (%) K. Returns the remainder of integer division ___ 12. if…else L. Double-selection statement in C++ ___ 13. White box testing M. Testing with knowledge of internal code structure ___ 14. Decision table N. Tabular representation of conditions and actions ___ 15. Documentation O. Written materials explaining the use of a program Section 5: Listing / Enumeration Instructions: List the required items accurately. (2 marks each)"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Translates high-level language to machine language ___ 2. Flowchart",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Translates high-level language to machine language ___ 2. Flowchart\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 41,
+        "type": "multiple_choice",
+        "questionText": "List the EIGHT phases of the Program Development Cycle in order:",
+        "options": [
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________ g) _______________________________________________ h) _______________________________________________"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "_______________________________________________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"_______________________________________________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 42,
+        "type": "multiple_choice",
+        "questionText": "List the FIVE mathematical operators in C++ with their names:",
+        "options": [
+          "_________________ Name: ________________",
+          "_________________ Name: ________________",
+          "_________________ Name: ________________",
+          "_________________ Name: ________________",
+          "_________________ Name: ________________"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "_________________ Name: ________________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"_________________ Name: ________________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 43,
+        "type": "multiple_choice",
+        "questionText": "List SIX C++ data types:",
+        "options": [
+          "____________ b) ____________ c) ____________",
+          "____________ e) ____________ f) ____________"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "____________ b) ____________ c) ____________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"____________ b) ____________ c) ____________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 44,
+        "type": "multiple_choice",
+        "questionText": "List the THREE types of control statements covered in the lectures:",
+        "options": [
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "_______________________________________________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"_______________________________________________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 45,
+        "type": "multiple_choice",
+        "questionText": "List FIVE properties of a well-defined algorithm:",
+        "options": [
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________",
+          "_______________________________________________ Section 6: Short Answer / Brief Explanation Instructions: Answer each question briefly but completely. (3 marks each)"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "_______________________________________________",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"_______________________________________________\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 46,
+        "type": "short_answer",
+        "questionText": "Explain the difference between a system programmer and an application programmer. _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 47,
+        "type": "short_answer",
+        "questionText": "What is the difference between black box testing and white box testing? _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 48,
+        "type": "short_answer",
+        "questionText": "What is the purpose of the #include <iostream.h> directive in a C++ program? _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 49,
+        "type": "short_answer",
+        "questionText": "Explain the difference between pre-increment (++x) and post-increment (x++) in C++. _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 50,
+        "type": "short_answer",
+        "questionText": "What is a compound statement in C++? Give an example. _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "cout << \"Passed\"; else cout << \"Failed\";",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "الإجابة المتوقعة هي \"cout << \"Passed\"; else cout << \"Failed\";\"."
+      },
+      {
+        "id": 51,
+        "type": "short_answer",
+        "questionText": "Write the syntax of the if...else statement in C++ and provide a simple example. _______________________________________________ _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 52,
+        "type": "short_answer",
+        "questionText": "Explain the 'dangling else' problem in C++ and how it is resolved. _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 53,
+        "type": "short_answer",
+        "questionText": "Explain the difference between a syntax error and a logical error. Which is harder to detect and why? _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 54,
+        "type": "short_answer",
+        "questionText": "What are the four quadrants of a decision table and what does each contain? _______________________________________________ _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 55,
+        "type": "multiple_choice",
+        "questionText": "Write a short C++ program that reads an integer from the user and prints 'Positive' if it is greater than zero, and 'Non-positive' otherwise. _______________________________________________ _______________________________________________ _______________________________________________ _______________________________________________ _______________________________________________ _______________________________________________",
+        "options": [
+          "True / False",
+          "False",
+          "True",
+          "False",
+          "True",
+          "True"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "True / False",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"True / False\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 56,
+        "type": "multiple_choice",
+        "questionText": "3. Arrows (interconnecting arrows)",
+        "options": [
+          "4. Top",
+          "5. Bottom",
+          "6. Syntax 7. 7. Assembler 8. 8. Case 9. 9. const"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "4. Top",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"4. Top\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 57,
+        "type": "short_answer",
+        "questionText": "10. bool / Boolean",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 58,
+        "type": "short_answer",
+        "questionText": "11. Modulus / % 12. 12. Equality 13. 13. Block 14. 14. main",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 59,
+        "type": "short_answer",
+        "questionText": "15. #include <iostream.h> 16. 16. cout 17. 17. Single",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 60,
+        "type": "short_answer",
+        "questionText": "18. Curly brackets / { }",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 61,
+        "type": "multiple_choice",
+        "questionText": "19. ?: 20. 20. switch Section 4: Matching",
+        "options": [
+          "Matching",
+          "B",
+          "E",
+          "C",
+          "A",
+          "D"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Matching",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Matching\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 62,
+        "type": "multiple_choice",
+        "questionText": "Eight phases of the Program Development Cycle:",
+        "options": [
+          "Problem Analysis",
+          "Task Analysis",
+          "Algorithm Development",
+          "Algorithm Testing",
+          "Coding",
+          "Testing and Debugging g) Documentation h) Implementation (Also: Maintenance and Enhancement)"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Problem Analysis",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Problem Analysis\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 63,
+        "type": "multiple_choice",
+        "questionText": "Five mathematical operators:",
+        "options": [
+          "+ (Addition)",
+          "- (Subtraction)",
+          "* (Multiplication)",
+          "/ (Division)",
+          "% (Modulus/Remainder)"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "+ (Addition)",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"+ (Addition)\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 64,
+        "type": "short_answer",
+        "questionText": "Six C++ data types: char, int (byte/short/int/long), float, double, bool, string",
+        "options": [],
+        "correctAnswerIndex": null,
+        "correctAnswerText": "",
+        "placeholder": "اكتب إجابتك هنا",
+        "explanation": "هذا السؤال الكتابي يحتاج مراجعة يدوية بعد الإرسال."
+      },
+      {
+        "id": 65,
+        "type": "multiple_choice",
+        "questionText": "Three types of control statements:",
+        "options": [
+          "Sequence Statements",
+          "Selection Statements (if, if-else, nested if, switch)",
+          "Repetition Statements (while, do-while, for)"
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "Sequence Statements",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"Sequence Statements\" بحسب النص المستخرج من الملف."
+      },
+      {
+        "id": 66,
+        "type": "multiple_choice",
+        "questionText": "Five properties of a well-defined algorithm:",
+        "options": [
+          "No ambiguity in any instruction",
+          "No uncertainty about which instruction is next",
+          "The description must be finite (cannot be open-ended)",
+          "It must terminate after a finite number of steps",
+          "It must be general enough to deal with any contingency Section 6: Short Answer — Model Answers 1. A system programmer writes programs that control and interface with hardware (e.g., operating systems). An application programmer writes programs for specific user tasks such as inventory control or payroll systems. 2. Black box testing does not require knowledge of the internal code; the tester only knows the inputs and expected outputs. White box testing uses explicit knowledge of the internal code structure to select test data and examine outputs. 3. The #include <iostream.h> directive notifies the preprocessor to include the input/output stream header, allowing the program to use cout (output) and cin (input) for screen/keyboard interaction. 4. Pre-increment (++x) increments x by one first, then returns the new value. Post-increment (x++) returns the current value of x first, then increments it by one. 5. A compound statement is a group of two or more statements enclosed in curly brackets { } treated as a single statement by the if/else. Example: if (x<5) { x = x+10; cout << x; } 6. Syntax: if (condition) statement1; else statement2; Example: if (grade >= 50) cout << \"Passed\"; else cout << \"Failed\"; 7. The dangling else problem occurs when it is unclear which if an else belongs to in nested if statements. The rule is: an else goes with the closest unmatched if. To force an else to pair with a specific if, use curly brackets { } to group the inner if. 8. A syntax error results from violating the grammar rules of the language (easier to detect—compiler flags them). A logical error is a flaw in the program's logic that produces incorrect results without generating an error message (harder to detect because the program runs without crashing). 9. The four quadrants are: (1) Conditions — lists all possible conditions; (2) Condition Alternatives — lists the set of values for each condition; (3) Actions — lists operations to be performed; (4) Action Entries — specifies which actions to perform for each combination of condition alternatives. 10."
+        ],
+        "correctAnswerIndex": 0,
+        "correctAnswerText": "No ambiguity in any instruction",
+        "placeholder": "",
+        "explanation": "الإجابة الصحيحة هي \"No ambiguity in any instruction\" بحسب النص المستخرج من الملف."
+      }
+    ],
+    "publishedAt": "١٨‏/٠٤‏/٢٠٢٦، ٣:٠٤ ص",
+    "publishedAtIso": "2026-04-18T01:04:15.315Z"
+  }
+]

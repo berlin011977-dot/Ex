@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: exam-platform-public
+    runtime: node
+    plan: starter
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/config
+    envVars:
+      - key: OWNER_PASSWORD
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        sync: false
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
+    disk:
+      name: exam-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 10

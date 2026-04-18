@@ -1,0 +1,8 @@
+node_modules
+.env
+.tmp-test-data
+cloudflared.err.log
+server.err.log
+server.out.log
+tunnel.err.log
+tunnel.out.log
