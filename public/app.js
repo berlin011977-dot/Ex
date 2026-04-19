@@ -520,12 +520,12 @@ function renderSummaryDownload(summary) {
 function updateSummaryFileChip() {
   const file = el.summaryFileInput.files?.[0];
   if (!file) {
-    el.summaryFileChip.textContent = "يمكنك استيراد ملخص من ملف، وسيتم تحويله إلى نص داخل المنصة.";
+    el.summaryFileChip.textContent = "ارفع ملف الملخص ليظهر للطلاب كزر تحميل مباشر.";
     return;
   }
 
   const sizeMb = (file.size / 1024 / 1024).toFixed(2);
-  el.summaryFileChip.textContent = `تم اختيار ملف للاستيراد • ${sizeMb}MB • لن يظهر كملف مرفق بعد الحفظ.`;
+  el.summaryFileChip.textContent = `تم اختيار الملف ${file.name} • ${sizeMb}MB • سيصبح قابلاً للتحميل بعد الحفظ.`;
 }
 
 function resetSummaryEditor() {
@@ -607,7 +607,7 @@ function renderMaterialsLibrary() {
                                   <button class="btn danger compact-btn" data-material-action="delete-summary" data-id="${summary.id}" type="button">حذف</button>
                                 </div>
                               </div>
-                              ${summary.text ? `<p>${escapeHtml(summary.text)}</p>` : `<p class="subtle">لا يوجد نص داخل المنصة لهذا الملخص.</p>`}
+                              <p class="subtle">${summary.hasFile ? "جاهز للتحميل للطلاب." : "ارفع ملفاً لهذا الملخص."}</p>
                               ${renderSummaryDownload(summary)}
                             </article>
                           `,
@@ -661,7 +661,7 @@ function renderStudentMaterials() {
                           (summary) => `
                             <article class="preview-question compact-summary">
                               <h4>${escapeHtml(summary.title)}</h4>
-                              ${summary.text ? `<p>${escapeHtml(summary.text)}</p>` : `<p class="subtle">هذا الملخص مرفوع كملف للتحميل.</p>`}
+                              <p class="subtle">هذا الملخص متاح كملف تحميل فقط.</p>
                               ${renderSummaryDownload(summary)}
                             </article>
                           `,
@@ -737,7 +737,7 @@ async function saveSummary(event) {
   formData.append("subjectDescription", el.subjectDescriptionInput.value.trim());
   formData.append("sectionName", el.sectionNameInput.value.trim());
   formData.append("summaryTitle", el.summaryTitleInput.value.trim());
-  formData.append("summaryText", el.summaryTextInput.value.trim());
+  formData.append("summaryText", el.summaryTextInput?.value?.trim() || "");
   const summaryFile = el.summaryFileInput.files?.[0];
   if (summaryFile) {
     formData.append("summaryFile", summaryFile);
@@ -841,7 +841,9 @@ async function onMaterialAction(action, id) {
     el.subjectDescriptionInput.value = match.subject.description || "";
     el.sectionNameInput.value = match.section.name || "";
     el.summaryTitleInput.value = match.summary.title || "";
-    el.summaryTextInput.value = match.summary.text || "";
+    if (el.summaryTextInput) {
+      el.summaryTextInput.value = match.summary.text || "";
+    }
     el.summaryFileInput.value = "";
     if (match.summary.hasFile && match.summary.fileName) {
       const currentFileSize = formatFileSize(match.summary.fileSize);
@@ -2422,12 +2424,12 @@ function escapeHtml(value) {
 function updateSummaryFileChip() {
   const file = el.summaryFileInput.files?.[0];
   if (!file) {
-    el.summaryFileChip.textContent = "يمكنك رفع ملف ملخص ليظهر كملف قابل للتحميل، ويمكن استخراج النص منه داخل المنصة.";
+    el.summaryFileChip.textContent = "ارفع ملف الملخص ليظهر للطلاب كزر تحميل مباشر.";
     return;
   }
 
   const sizeMb = (file.size / 1024 / 1024).toFixed(2);
-  el.summaryFileChip.textContent = `تم اختيار الملف ${file.name} • ${sizeMb}MB • سيظهر كملف قابل للتحميل بعد الحفظ.`;
+  el.summaryFileChip.textContent = `تم اختيار الملف ${file.name} • ${sizeMb}MB • سيصبح قابلاً للتحميل بعد الحفظ.`;
 }
 
 // Override the earlier preview renderer to avoid mojibake labels in the owner UI.

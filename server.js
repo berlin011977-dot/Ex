@@ -3467,8 +3467,10 @@ app.post("/api/admin/summaries", requireOwner, upload.single("summaryFile"), asy
       "ملخص جديد",
     );
 
-    if (!summaryText && !storedFile) {
-      return res.status(400).json({ error: "أضف نص الملخص أو ارفع ملفاً أولاً." });
+    if (!storedFile) {
+      return res.status(400).json({
+        error: "ارفع ملف الملخص أولاً ليظهر للطلاب كملف قابل للتحميل.",
+      });
     }
 
     let subject = platformState.subjects.find(
@@ -3506,7 +3508,7 @@ app.post("/api/admin/summaries", requireOwner, upload.single("summaryFile"), asy
     await writePlatformState(platformState);
     return res.status(201).json({
       subjects: publicSubjectsPayload(platformState.subjects, { includeText: true }),
-      message: "تم حفظ الملخص.",
+      message: "تم حفظ الملخص كملف جاهز للتحميل.",
     });
   } catch (error) {
     if (storedFile) {
@@ -3552,15 +3554,10 @@ app.put("/api/admin/summaries/:summaryId", requireOwner, upload.single("summaryF
       currentSummary.title || "ملخص جديد",
     );
 
-    if (!summaryText && !nextFileMeta.hasFile) {
+    if (!nextFileMeta.hasFile) {
       return res.status(400).json({
-        error:
-          "\u0623\u0636\u0641 \u0646\u0635 \u0627\u0644\u0645\u0644\u062e\u0635 \u0623\u0648 \u0627\u0631\u0641\u0639 \u0645\u0644\u0641\u0627\u064b \u0623\u0648\u0644\u0627\u064b.",
+        error: "هذا الملخص يحتاج ملفاً مرفقاً حتى يبقى قابلاً للتحميل للطلاب.",
       });
-    }
-
-    if (!summaryText && !nextFileMeta.hasFile) {
-      return res.status(400).json({ error: "Ø£Ø¶Ù Ù†Øµ Ø§Ù„Ù…Ù„Ø®Øµ Ø£Ùˆ Ø§Ø±ÙØ¹ Ù…Ù„ÙØ§Ù‹ Ø£ÙˆÙ„Ø§Ù‹." });
     }
 
     let targetSubject = platformState.subjects.find(

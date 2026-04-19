@@ -194,7 +194,7 @@ D) بورتسودان
           <div class="section-head">
             <div>
               <h3>المواد والملخصات</h3>
-              <p class="subtle">أضف مادة، أقسامها، وارفع ملخصات قابلة للتعديل والحذف.</p>
+              <p class="subtle">ارفع ملفات المادة فقط، وستظهر للطلاب كملفات تحميل مرتبة داخل كل قسم.</p>
             </div>
           </div>
 
@@ -226,22 +226,19 @@ D) بورتسودان
             <label class="upload-drop">
               <input id="summaryFileInput" name="summaryFile" type="file" accept=".txt,.pdf,.docx">
               <span class="upload-title">استيراد ملخص من ملف</span>
-              <span class="upload-sub">اختياري: TXT أو PDF أو DOCX وسيتم تحويله إلى نص داخل المنصة</span>
+              <span class="upload-sub">ارفع PDF أو DOCX أو TXT، وأي ملف غير PDF سيتحول تلقائياً إلى PDF للطالب</span>
             </label>
 
-            <div class="file-chip" id="summaryFileChip">يمكنك استيراد ملخص من ملف، وسيتم تحويله إلى نص داخل المنصة.</div>
-
-            <label class="field">
-              <span>نص الملخص</span>
-              <textarea id="summaryTextInput" rows="7" placeholder="اكتب أو الصق نص الملخص هنا"></textarea>
-            </label>
+            <div class="file-chip" id="summaryFileChip">ارفع ملف الملخص ليظهر للطلاب كزر تحميل مباشر.</div>
+            <input id="summaryTextInput" type="hidden" value="">
+            <div class="subtle-box">المنصة تعرض الملخص كملف تحميل فقط، ولا تعرض نصه للطلاب داخل الصفحة.</div>
 
             <div class="action-row">
               <button class="btn primary" id="saveSummaryBtn" type="submit">حفظ الملخص</button>
               <button class="btn ghost" id="clearSummaryEditorBtn" type="button">تفريغ النموذج</button>
             </div>
 
-            <div class="status-box" id="summaryStatus">جاهز لإضافة مادة أو ملخص جديد.</div>
+            <div class="status-box" id="summaryStatus">جاهز لإضافة ملف ملخص جديد.</div>
           </form>
 
           <div id="ownerMaterialsList" class="exam-list empty-state">
