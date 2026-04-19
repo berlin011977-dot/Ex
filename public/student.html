@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة الطالب | عبدالمعز</title>
+  <meta name="description" content="منصة الطالب للاختبارات والملخصات">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/student.css">
+</head>
+<body class="student-page">
+  <section id="blockedScreen" class="blocked-screen hidden">
+    <div class="blocked-card">
+      <img class="blocked-logo" src="/logo-moez.png" alt="شعار المنصة">
+      <h1>أنت محظور يا حلو</h1>
+      <p id="blockedMessage">امشي شوف قرايتك براك ;)</p>
+    </div>
+  </section>
+
+  <div class="student-shell hidden" id="appShell">
+    <header class="student-topbar">
+      <div class="student-brand">
+        <img class="student-brand-logo" src="/logo-moez.png" alt="شعار عبدالمعز">
+        <div>
+          <h1 class="student-brand-title">منصة الامتحانات</h1>
+          <p class="student-brand-sub">الطالب</p>
+        </div>
+      </div>
+
+      <div class="student-topbar-actions">
+        <a class="btn ghost compact-btn" href="/admin.html">المالك</a>
+        <button class="btn ghost compact-btn" id="dashboardBtn" type="button">الرئيسية</button>
+        <button class="btn danger compact-btn" id="logoutBtn" type="button">خروج</button>
+      </div>
+    </header>
+
+    <main class="student-main">
+      <section class="student-welcome-card">
+        <div class="student-welcome-copy">
+          <span class="small-badge">الحساب</span>
+          <h2 id="studentName">-</h2>
+          <p id="studentEmail" class="subtle">-</p>
+        </div>
+
+        <div class="student-stats-grid">
+          <article class="student-stat-card">
+            <span>الامتحانات المنشورة</span>
+            <strong id="statsPublished">0</strong>
+          </article>
+          <article class="student-stat-card">
+            <span>الامتحانات المحلولة</span>
+            <strong id="statsSolved">0</strong>
+          </article>
+          <article class="student-stat-card">
+            <span>الملفات المنزلة</span>
+            <strong id="statsDownloads">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="dashboardView" class="student-view">
+        <section class="panel student-section-card">
+          <div class="section-head slim-head">
+            <div>
+              <h3>الاختبارات</h3>
+            </div>
+            <div class="student-count-pill">
+              <span>المتاح</span>
+              <strong id="dashboardExamCount">0</strong>
+            </div>
+          </div>
+          <div id="examList" class="student-card-grid"></div>
+        </section>
+
+        <section class="panel student-section-card">
+          <div class="section-head slim-head">
+            <div>
+              <h3>ملخصات المواد</h3>
+            </div>
+          </div>
+          <div id="materialList" class="student-material-grid"></div>
+        </section>
+
+        <section class="panel student-section-card">
+          <div class="section-head slim-head">
+            <div>
+              <h3>ملفي الشخصي</h3>
+            </div>
+          </div>
+
+          <div class="history-grid">
+            <div>
+              <div class="section-head compact-head">
+                <h4>الاختبارات المحلولة</h4>
+              </div>
+              <div id="historyResults" class="history-list"></div>
+            </div>
+
+            <div>
+              <div class="section-head compact-head">
+                <h4>الملفات المنزلة</h4>
+              </div>
+              <div id="historyDownloads" class="history-list"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="examView" class="student-view hidden">
+        <section class="panel exam-panel">
+          <div class="exam-header">
+            <div>
+              <h2 id="currentExamTitle">الامتحان</h2>
+            </div>
+            <div class="timer-pill">
+              <span>الوقت</span>
+              <strong id="timerValue">00:00</strong>
+            </div>
+          </div>
+
+          <div class="exam-summary-strip">
+            <article class="exam-summary-item">
+              <span>السؤال</span>
+              <strong id="questionIndex">1</strong>
+            </article>
+            <article class="exam-summary-item">
+              <span>من</span>
+              <strong id="questionCount">0</strong>
+            </article>
+            <article class="exam-summary-item">
+              <span>الدرجة</span>
+              <strong id="questionPoints">0</strong>
+            </article>
+          </div>
+
+          <div class="student-progress">
+            <div class="student-progress-fill" id="progressFill"></div>
+          </div>
+
+          <div class="question-nav-panel">
+            <button class="btn ghost compact-btn" id="toggleQuestionNavBtn" type="button">إظهار أرقام الأسئلة</button>
+            <div id="questionNavWrap" class="question-nav-wrap hidden">
+              <div id="questionNav" class="student-question-nav"></div>
+            </div>
+          </div>
+          <article id="questionCard" class="student-question-card"></article>
+
+          <div class="student-exam-actions">
+            <button class="btn ghost" id="prevQuestionBtn" type="button">السابق</button>
+            <button class="btn ghost" id="nextQuestionBtn" type="button">التالي</button>
+            <button class="btn primary" id="submitExamBtn" type="button">إرسال</button>
+          </div>
+        </section>
+      </section>
+
+      <section id="resultView" class="student-view hidden">
+        <section class="panel result-page-panel">
+          <div class="result-hero">
+            <div>
+              <span class="small-badge">النتيجة</span>
+              <h2 id="resultExamTitle">الامتحان</h2>
+            </div>
+            <div class="result-score-box" id="resultScore">0%</div>
+          </div>
+
+          <div id="resultDetails" class="student-result-stats"></div>
+          <div id="resultReviewList" class="student-review-list"></div>
+
+          <div class="student-exam-actions">
+            <button class="btn primary" id="backDashboardBtn" type="button">رجوع</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="student-footer">
+      <span>المطور عبدالمعز</span>
+      <a href="https://instagram.com/mvii3.a" target="_blank" rel="noreferrer">@mvii3.a</a>
+    </footer>
+  </div>
+
+  <script src="/platform-client.js" defer></script>
+  <script src="/student.js" defer></script>
+</body>
+</html>

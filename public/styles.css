@@ -38,6 +38,14 @@ body {
   color: var(--text);
 }
 
+body.admin-page #homeBtn,
+body.admin-page #studentBtn,
+body.admin-page #heroStudentBtn,
+body.admin-page #homeView,
+body.admin-page #studentView {
+  display: none !important;
+}
+
 button,
 input,
 textarea {
@@ -189,7 +197,7 @@ button {
 
 .home-stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
 }
 
@@ -301,6 +309,7 @@ button {
   background: #fff;
   border: 1px solid var(--border);
   font-size: 0.88rem;
+  overflow-wrap: anywhere;
 }
 
 .type-chip {
@@ -510,6 +519,20 @@ button {
   background: #fff;
   border: 1px solid var(--border);
   line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.subtle-box {
+  background: #f8fbff;
+}
+
+.library-section {
+  display: grid;
+  gap: 12px;
+}
+
+.compact-summary h4 {
+  margin: 0;
 }
 
 .student-entry {
@@ -632,6 +655,15 @@ button {
   border-color: var(--primary);
 }
 
+.translated-box {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f6fbf0;
+  border: 1px solid #d9ebc7;
+  color: #355021;
+  line-height: 1.7;
+}
+
 .option-button {
   display: flex;
   align-items: flex-start;
@@ -640,6 +672,19 @@ button {
   text-align: right;
   color: var(--text);
   cursor: pointer;
+}
+
+.option-copy {
+  min-width: 0;
+  flex: 1;
+  display: grid;
+  gap: 4px;
+  overflow-wrap: anywhere;
+}
+
+.option-subtext {
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .option-button.selected {
@@ -711,6 +756,10 @@ button {
   border-color: #efd27b;
 }
 
+.review-card.close {
+  border-color: #efd27b;
+}
+
 .answer-chip {
   display: inline-flex;
   align-items: center;
@@ -738,6 +787,12 @@ button {
   background: var(--warning-soft);
   border-color: #efd27b;
   color: var(--warning);
+}
+
+.answer-chip.close {
+  background: #fff6db;
+  border-color: #efd27b;
+  color: #946200;
 }
 
 .modal {
@@ -840,4 +895,45 @@ button {
   .result-box {
     min-width: 0;
   }
+
+  .answer-chip {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  .question-card,
+  .preview-question,
+  .exam-card {
+    padding: 14px;
+  }
+}
+
+.visitor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.visitor-detail {
+  display: grid;
+  gap: 4px;
+}
+
+.visitor-detail strong {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.visitor-detail p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.mono-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }

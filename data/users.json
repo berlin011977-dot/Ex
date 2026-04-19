@@ -1,0 +1,26 @@
+[
+  {
+    "id": "d13f0239-d254-4acc-b03d-6647b8ec68c3",
+    "name": "عبدالمعز",
+    "email": "bdalmzm5@gmail.com",
+    "passwordSalt": "0c5f8460406be25e0afecc66ab4785c6",
+    "passwordHash": "f28462ceb45d11a90c665bccc630d856324a9d2646f6c500554269e0225f2f9206f1f9b17808f0fd0f40360cd30e41ce536661a677ac8460407a97073c7ef4d2",
+    "avatarLabel": "عب",
+    "createdAt": "١٩‏/٠٤‏/٢٠٢٦، ٣:٢٠ ص",
+    "createdAtIso": "2026-04-19T01:20:27.495Z",
+    "lastLoginAt": "١٩‏/٠٤‏/٢٠٢٦، ٣:٢٠ ص",
+    "lastLoginAtIso": "2026-04-19T01:20:27.737Z",
+    "sessions": [
+      {
+        "token": "7d433289-7332-4cbc-a586-6abb50e9158e",
+        "deviceId": "77120a95-ae47-4b66-885d-79a67961706b",
+        "createdAt": "١٩‏/٠٤‏/٢٠٢٦، ٣:٢٠ ص",
+        "createdAtIso": "2026-04-19T01:20:27.451Z",
+        "lastUsedAt": "١٩‏/٠٤‏/٢٠٢٦، ٣:٢٠ ص",
+        "lastUsedAtIso": "2026-04-19T01:20:27.737Z"
+      }
+    ],
+    "downloads": [],
+    "resultIds": []
+  }
+]

@@ -62,7 +62,7 @@ https://your-service-name.onrender.com
 ## كلمة مرور المالك الحالية
 
 ```text
-SnEsRQWvZ4%MnkR8KGbQ
+1772004m
 ```
 
 يمكن تغييرها من:
@@ -78,3 +78,20 @@ SnEsRQWvZ4%MnkR8KGbQ
 وعند النشر على Render ستحفظ داخل المسار المحدد في:
 
 [`C:\Users\Berlin\Desktop\Ex\render.yaml`](C:\Users\Berlin\Desktop\Ex\render.yaml)
+
+## نشر مجاني سريع
+
+إذا أردت رابطاً ثابتاً ومجانياً بدون الاعتماد على التخزين المحلي، فالمسار الأنسب الآن هو:
+
+- `Koyeb` لاستضافة تطبيق `Node.js`
+- `Turso` لحفظ الامتحانات والنتائج بشكل دائم
+
+المشروع يدعم هذا المسار الآن عبر متغيرات البيئة التالية:
+
+```text
+OWNER_PASSWORD=...
+TURSO_DATABASE_URL=...
+TURSO_AUTH_TOKEN=...
+```
+
+إذا لم تضف قيم `Turso` سيستمر المشروع باستخدام الملفات المحلية داخل مجلد `data`.

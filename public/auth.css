@@ -1,0 +1,131 @@
+body.auth-page {
+  background:
+    radial-gradient(circle at top, rgba(21, 112, 239, 0.16), transparent 34%),
+    linear-gradient(180deg, #eef4fb 0%, #f7f9fc 100%);
+}
+
+.auth-shell {
+  min-height: calc(100vh - 96px);
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.auth-hero-card {
+  width: min(460px, 100%);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(216, 226, 238, 0.9);
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(17, 24, 39, 0.12);
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  position: relative;
+  backdrop-filter: blur(12px);
+}
+
+.admin-link {
+  position: absolute;
+  inset-inline-start: 20px;
+  top: 18px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-logo,
+.blocked-logo {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 28px;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+}
+
+.auth-hero-card h1,
+.blocked-card h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.auth-subtitle {
+  text-align: center;
+  margin: 0;
+  color: var(--muted);
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.auth-tab {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text);
+  padding: 12px 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.auth-tab.is-active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.auth-form {
+  display: grid;
+  gap: 12px;
+}
+
+.auth-status {
+  text-align: center;
+}
+
+.auth-status[data-mode="error"] {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.blocked-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at center, rgba(198, 56, 79, 0.14), transparent 32%),
+    linear-gradient(180deg, #0f172a 0%, #111827 100%);
+}
+
+.blocked-card {
+  width: min(520px, 100%);
+  padding: 28px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.96);
+  text-align: center;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.35);
+}
+
+.auth-footer {
+  padding-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  .auth-hero-card {
+    padding: 20px 16px;
+    border-radius: 24px;
+  }
+
+  .admin-link {
+    position: static;
+    justify-self: center;
+  }
+}
