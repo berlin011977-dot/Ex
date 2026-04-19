@@ -8,3 +8,9 @@ server.out.log
 tunnel.err.log
 tunnel.out.log
 data/platform.json
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
